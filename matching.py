@@ -3,16 +3,16 @@ from google import genai
 from PIL import Image
 import pandas as pd
 
-# Load API key from secrets.py (gitignored file)
+# Load API key from api_keys.py (gitignored file)
 try:
-    from secrets import GEMINI_API_KEY
+    from api_keys import GEMINI_API_KEY
     os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 except ImportError:
-    # Fallback: try to get from environment variable if secrets.py doesn't exist
+    # Fallback: try to get from environment variable if api_keys.py doesn't exist
     if "GEMINI_API_KEY" not in os.environ:
         raise ValueError(
-            "GEMINI_API_KEY not found. Please create a secrets.py file with your API key, "
-            "or set the GEMINI_API_KEY environment variable. See secrets.py.example for reference."
+            "GEMINI_API_KEY not found. Please create an api_keys.py file with your API key, "
+            "or set the GEMINI_API_KEY environment variable. See api_keys.py.example for reference."
         )
 
 client = genai.Client()
@@ -91,6 +91,18 @@ def parse_match_result(result_text):
     # If we can't determine, return None
     return None
 
+def extract_explanation(result_text):
+    """
+    Extracts the explanation/justification from the API response.
+    Returns the full result text as explanation (since it contains the explanation).
+    """
+    if not result_text or "Error:" in result_text:
+        return result_text
+    
+    # The full result text contains the explanation, so return it
+    # You could parse it further if needed, but for now return the full text
+    return result_text
+
 # --- Execution ---
 # Your previous L. annulata description
 leptodeira_annulata = {
@@ -122,12 +134,14 @@ for reference in reference_list:
             NEW_IMAGE_PATH = os.path.join("data","test",species,file_name)
             result = identify_snake_species(REFERENCE_IMAGE_PATH, NEW_IMAGE_PATH, reference["description"])
             is_match = parse_match_result(result)
+            explanation = extract_explanation(result)
             dict_result = {
                 "reference": reference["file_name"],
                 "species": species,
                 "query_image": file_name,
-                "result": result,
-                "is_match": is_match
+                "is_match": is_match,
+                "explanation": explanation,
+                "full_result": result
             }
             result_list.append(dict_result)
 

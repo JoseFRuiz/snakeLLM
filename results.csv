@@ -1,0 +1,751 @@
+reference,species,query_image,result,is_match
+L. annulata_reference.PNG,L. annulata,ICN_10067.jpg,"VERDICT: **NO MATCH**
+
+**Justification:**
+
+1.  **Head Morphology:** The Candidate Image's head appears relatively small and less distinct from the neck compared to the *Leptodeira annulata* heads shown in the Reference Image (C, D, E), which exhibit larger, more prominent eyes and a more triangular shape distinct from the neck. Furthermore, the specific dorsal head scale patterns, such as the V-shape or arrow-like markings visible on the crown of the reference *L. annulata* (especially D and E), are not discernible or clearly present in the Candidate Image.
+2.  **Body Pattern:** While the Candidate Image displays a prominent zigzag pattern along the dorsal side, the Key Text Description specifies ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches... forming a zigzag pattern."" The pattern in the Candidate Image appears as an extremely dark, almost continuous, undulating stripe rather than clearly identifiable distinct blotches that have fused. This makes it a less precise fit for the described ""fused blotch"" characteristic.",False
+L. annulata_reference.PNG,L. annulata,ICN_11065.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The candidate image does not match *Leptodeira annulata*.
+1.  **Head Morphology:** The candidate snake has a slender head that is not distinctly set off from the neck, and lacks the large, prominent eyes and clear head scutellation visible in the *Leptodeira annulata* reference images (C, D, E). The overall head shape is significantly different, appearing more blunt and less defined.
+2.  **Dorsal Pattern:** The candidate snake exhibits irregular, large, black blotches on a white background. This pattern does not correspond to the ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern"" described for *Leptodeira annulata*. The blotches in the candidate image are more scattered and do not form the characteristic zigzag.",False
+L. annulata_reference.PNG,L. annulata,ICN_12300.jpg,"NO MATCH
+
+**Explanation:**
+The candidate image does not display the key features of *Leptodeira annulata*. The dorsal head pattern in the candidate image appears as irregular blotches, lacking the distinct ""arrowhead"" or ""heart-shaped"" marking often visible on the parietal scales of *Leptodeira annulata* (as seen in reference images D and E). More importantly, the body pattern in the candidate image shows irregular, somewhat isolated dark blotches, which does not match the description of ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern"" characteristic of *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. annulata,ICN_265.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+
+The head morphology in the Candidate Image, being a high-contrast black and white representation, lacks the necessary detail to confirm specific scale patterns or eye characteristics seen in the Reference Image (C, D, E). However, the crucial distinguishing feature provided by the Key Text Description is the body pattern.
+
+The Key Text describes *Leptodeira annulata* as having a ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The Candidate Image clearly displays a body pattern of distinct, separate, dark saddle-like blotches on a lighter background. These blotches are not fused to form a zigzag pattern, nor do they appear to originate from a half-moon shaped first blotch. This body pattern directly contradicts the description provided for *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. approximans,ICN_13093.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:**
+The Candidate Image, depicting a dorsal body pattern, shows a series of dark dorsal blotches that appear fused, forming a distinct zigzag pattern, particularly in the anterior portion of the body. This observation aligns directly with the Key Text Description for *Leptodeira annulata*: ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" While the head features for comparison against the Reference Image are not visible in the Candidate Image, the visible body pattern is consistent with the provided diagnostic description for the species.",
+L. annulata_reference.PNG,L. ashmeadii,ICN_10463.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The head morphology and dorsal pattern in the Candidate Image do not align with the characteristics of *Leptodeira annulata*. The head in the Candidate Image appears more elongated and tapers less distinctly from the neck than the reference *Leptodeira annulata*. Furthermore, the characteristic 'V' or 'M' shaped marking on the parietal region visible in the reference images (D and E) is absent in the Candidate Image. The body pattern in the Candidate Image consists of discrete, somewhat squarish or irregular dorsal blotches, which does not match the description of ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern"" for *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. ashmeadii,ICN_11475.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The candidate image does not match *Leptodeira annulata*. The key textual description specifies a ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" In the candidate image, the dorsal pattern on the anterior body consists of irregular, somewhat connected blotches that do not clearly form a zigzag pattern, nor is the first blotch distinctly half-moon shaped. While the high-contrast rendering of the candidate image makes head morphology comparison difficult for fine details, the body pattern significantly diverges from the species description.",False
+L. annulata_reference.PNG,L. ashmeadii,ICN_11520.jpg,"VERDICT: **MATCH**
+
+**Justification:**
+
+The candidate image exhibits key features consistent with *Leptodeira annulata*. The head morphology shows a broad head with large, prominent eyes, and a distinct patterned crown, which aligns with the general appearance in the reference images (C, D, E). Most notably, the dorsal body pattern immediately behind the head clearly displays dark blotches that are fused along the vertebral line, forming a distinct zigzag pattern, precisely as described in the key text: ""First dorsal blotch... generally fused with other dorsal blotches in the first third of body forming a zigzag pattern.""",
+L. annulata_reference.PNG,L. ashmeadii,ICN_13653.jpg,"**Verdict:** NO MATCH
+
+**Explanation:** While the overall head morphology and prominent eyes in the Candidate Image are generally consistent with *Leptodeira* species, the key dorsal body pattern described for *Leptodeira annulata* is absent. The Candidate Image displays distinct, broad, somewhat rectangular dorsal blotches that are separate and do not form the ""half-moon shape"" first dorsal blotch or the ""zigzag pattern"" of fused blotches in the first third of the body as specified in the reference text.",False
+L. annulata_reference.PNG,L. ashmeadii,ICN_14305.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The head morphology in the Candidate Image is distinctly narrower and less distinct from the neck compared to the broader, more prominent heads shown for *Leptodeira annulata* in the Reference Image (C, D, E). Furthermore, the dorsal pattern in the Candidate Image, characterized by large, irregular dark blotches, does not match the description of the ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The blotches in the Candidate Image are less defined as half-moons and do not form a clear zigzag pattern.",False
+L. annulata_reference.PNG,L. ashmeadii,ICN_14306.jpg,"VERDICT: **NO MATCH**
+
+**Explanation:**
+
+The candidate image shows a snake with broad, irregular, and somewhat broken transverse blotches along its body. This pattern does not align with the key text description for *Leptodeira annulata*, which specifies a ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The blotches in the candidate image are distinct bands, not appearing to be fused longitudinally to create a zigzag, nor does the first blotch clearly exhibit a half-moon shape. Due to the high-contrast black and white nature of the candidate image, head morphology and specific scale patterns cannot be reliably compared to the detailed reference images (C, D, E). However, the critical body pattern is inconsistent with the diagnostic features of *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. ashmeadii,ICN_147.png,"**NO MATCH**
+
+**Justification:**
+The head of the snake, which is crucial for species identification and detailed in the provided reference image (head morphology, scale patterns, and eye characteristics like pupil shape and parietal markings), is completely absent from the Candidate Image. Therefore, a comprehensive comparison of key diagnostic head features cannot be performed. While the visible dorsal body pattern in the Candidate Image, with its dark, fused blotches forming a zigzag pattern, is consistent with the ""zigzag pattern"" aspect of the Key Text Description for *Leptodeira annulata*, the inability to verify the head features makes a definitive species verification impossible.",False
+L. annulata_reference.PNG,L. ashmeadii,ICN_2584.png,"**VERDICT:** MATCH
+
+**EXPLANATION:**
+The candidate image's head morphology, though depicted in high contrast and monochrome, shows a general shape consistent with the reference images of *Leptodeira annulata*. More significantly, the dorsal body pattern in the candidate image clearly displays dark blotches that are interconnected or fused, forming a distinct undulating or zigzag-like pattern in the anterior part of the body. This characteristic precisely matches the key text description for *Leptodeira annulata*: ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern.""",True
+L. annulata_reference.PNG,L. ashmeadii,TAS_2435.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The body pattern of the candidate snake does not align with the description for *Leptodeira annulata*. The key text specifies a ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The candidate image, however, displays distinct, somewhat rectangular or saddle-shaped dorsal blotches that are separate and do not form a zigzag pattern. While the head morphology is harder to ascertain definitively from the stylized black and white image, the distinct lack of the characteristic zigzag body pattern in the anterior third of the body is a clear non-matching feature.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2496.jpg,"**Verdict:** NO MATCH
+
+**Justification:** While the head morphology in the candidate image is not clear enough for a definitive comparison, the body pattern does not match the key text description for *Leptodeira annulata*. The description specifies ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The candidate image displays broad, somewhat irregular and often broken dark transverse bands, rather than the characteristic fused, zigzag pattern described.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2570.jpg,"NO MATCH
+
+**Justification:**
+The candidate image does not match *Leptodeira annulata*. The head in the candidate image is more elongated with heavily keeled scales, differing significantly from the smoother, broader heads shown in the reference images (C, D, E). Furthermore, the body pattern in the candidate image consists of distinct, transverse black bands, which does not correspond to the ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern"" described for *Leptodeira annulata*. The body scales also appear keeled, unlike the typically smooth or weakly keeled scales of *Leptodeira*.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2633.jpg,"**VERDICT: NO MATCH**
+
+**Justification:**
+
+The body pattern in the Candidate Image does not match the key text description for *Leptodeira annulata*. The text describes ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" In contrast, the Candidate Image shows distinct, separated transverse bands along the body, which are not fused into a zigzag pattern and lack the described half-moon shape for the first blotch. Due to the highly stylized nature of the Candidate Image, detailed head morphology comparison with the Reference Image is not possible, but the body pattern alone is sufficient to rule out a match.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2751.jpg,"MATCH
+
+**Justification:**
+While the head features in the Candidate Image are too indistinct to compare with the detailed reference images (C, D, E), the body pattern visible in the Candidate Image strongly matches the Key Text Description for *Leptodeira annulata*. The image clearly shows dark dorsal blotches that appear fused and form a continuous zigzag pattern along the body, consistent with ""generally fused with other dorsal blotches in the first third of body forming a zigzag pattern.""",True
+L. annulata_reference.PNG,L. ashmeadii,TAS_2753.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The Candidate Image displays only a section of the snake's body, with the head entirely absent. Therefore, a critical comparison of head morphology, scale patterns, and eye characteristics, as provided in the Reference Image for *Leptodeira annulata*, cannot be performed. While the body pattern in the Candidate Image shows dark, irregular, and somewhat connecting bands that form a zigzag-like pattern, which *could* be consistent with the ""zigzag pattern"" formed by fused dorsal blotches described in the key text for *Leptodeira annulata*, the lack of visible head features prevents a definitive and complete verification.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2755.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image displays a body pattern of distinct, relatively straight-across dark bands separated by lighter interspaces. This pattern does not match the Key Text Description for *Leptodeira annulata*, which specifies ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The candidate image lacks the described half-moon shaped blotches and the distinctive zigzag fusion pattern. The head of the snake in the Candidate Image is not visible for comparison with the Reference Image.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2756.jpg,"NO MATCH
+
+The candidate image's snake exhibits a distinctly different head morphology and dorsal pattern compared to the reference *Leptodeira annulata*.
+
+**Non-matching features:**
+*   **Head Morphology:** The candidate snake's head is notably narrower, more elongated, and less distinct from the neck than the broader, more triangular head shown in the *Leptodeira annulata* reference image (C and D).
+*   **Head Pattern:** The dorsal head pattern in the candidate image shows a large, solid dark patch extending onto the nape, which differs from the more intricate, sometimes shield-like or broken patterns seen on the head and nape of the reference *Leptodeira annulata*.
+*   **Body Pattern:** The key text describes a ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The visible body pattern in the candidate image consists of broad, somewhat irregular dark bands that do not appear to be formed by fused half-moon shapes creating a zigzag.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2758.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:**
+The candidate image exhibits a head morphology consistent with *Leptodeira annulata*, including a patterned dorsal head surface. More importantly, the anterior body pattern precisely matches the key text description: the first dorsal blotch appears to have a half-moon shape, and it is clearly fused with subsequent dorsal blotches, forming a distinct zigzag pattern in the first third of the body.",True
+L. annulata_reference.PNG,L. ashmeadii,TAS_2769.jpg,"**VERDICT:** MATCH
+
+**Justification:**
+The Candidate Image's head morphology, while stylized, shows a distinct head shape with what appear to be relatively large eyes and a patterned dorsal head, which is broadly consistent with the reference images of *Leptodeira annulata*. More importantly, the dorsal body pattern in the Candidate Image strongly matches the key text description: the dark blotches are clearly fused in the anterior portion of the body, forming a prominent zigzag pattern along the dorsum.",True
+L. annulata_reference.PNG,L. ashmeadii,TAS_2773.jpg,"NO MATCH.
+
+The candidate image shows distinct, unfused transverse bands on the anterior dorsal body, which does not match the key text description for *Leptodeira annulata* of having ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The head morphology in the candidate image is too indistinct for a detailed comparison, but the body pattern is clearly inconsistent.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2774.jpg,"**VERDICT:** NO MATCH
+
+**EXPLANATION:**
+The candidate image exhibits a distinct banded pattern of broad, alternating black and white rings along the body. This directly contradicts the key text description for *Leptodeira annulata*, which specifies ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The candidate image shows no evidence of zigzagging blotches or a half-moon shaped first dorsal blotch; instead, it displays clear, separate bands. While the head in the candidate image is not clear enough for detailed scale comparison, the overall body pattern is fundamentally different from the described *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2775.jpg,"**NO MATCH**
+
+The candidate image's body pattern does not match the description for *Leptodeira annulata*. The key text describes a ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The candidate image, however, displays a pattern of somewhat irregular, fragmented transverse bands or blotches rather than the distinct fused, zigzag pattern characteristic of *Leptodeira annulata*. Due to the highly stylized nature of the candidate image, head details are difficult to verify definitively, but the clear discrepancy in body patterning is sufficient for a ""NO MATCH"" verdict.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2776.jpg,"**Verdict:** NO MATCH
+
+**Justification:**
+The candidate image does not match *Leptodeira annulata* based on both head morphology and body pattern. The head in the candidate image appears more conical and less distinct from the neck, lacking the broader, somewhat flattened shape and the specific dorsal blotch patterns (e.g., the complex heart-shaped pattern in reference image D) characteristic of *Leptodeira annulata*. Furthermore, the body pattern in the candidate image consists of broad, irregular dark crossbands, which differs significantly from the described ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern"" typical of *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2777.jpg,"VERDICT: NO MATCH
+
+JUSTIFICATION: The candidate image does not match *Leptodeira annulata*. The head morphology in the candidate image is significantly different from the reference heads (C, D, E), appearing much more textured, possibly flattened, and lacking the distinct large eyes characteristic of *Leptodeira annulata*. Crucially, the body of the snake in the candidate image displays extremely rugose (rough, heavily textured, possibly tuberculate) scales, which is inconsistent with *Leptodeira annulata* known for having smooth or only weakly keeled dorsal scales. Furthermore, the dorsal pattern in the candidate image, while blotched, does not clearly show the ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern"" described for *Leptodeira annulata*; instead, it presents as highly irregular and fragmented blotches.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2788.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The candidate image does not match *Leptodeira annulata*. The head morphology in the candidate image shows a very broad, blunt head that is abruptly distinct from the neck, which differs from the more elongated, somewhat triangular head shown in the reference image for *Leptodeira annulata*. More importantly, the dorsal body pattern in the candidate image consists of irregular, somewhat transverse bands or blotches. This significantly contrasts with the ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern"" described for *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2794.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+The Candidate Image does not match *Leptodeira annulata* based on the following observations:
+
+1.  **Head Morphology:** The Candidate Image displays a broad, distinctly triangular head, much wider than the neck. This contrasts significantly with the more slender and less triangular head typical of *Leptodeira annulata* shown in the Reference Image.
+2.  **Body Pattern:** The Candidate Image shows distinct, somewhat triangular or diamond-shaped dorsal blotches that appear mostly separate. This pattern does not align with the Key Text Description for *Leptodeira annulata*, which specifies a ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern.""
+3.  **Scale Texture:** While difficult to discern perfectly from the monochrome image, the Candidate Image suggests very rough, possibly keeled scales, particularly on the body, which is generally not characteristic of the smooth-scaled *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2860.jpg,"**VERDICT:** NO MATCH
+
+**Justification:**
+The candidate image displays a series of broad, distinct transverse bands across the body. This pattern does not align with the key text description for *Leptodeira annulata*, which specifies ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The candidate image lacks the described zigzag pattern and half-moon-shaped blotch. While head morphology cannot be definitively assessed due to the stylized nature of the candidate image, the clear discrepancy in the body pattern is sufficient for a NO MATCH determination.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2988.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+The candidate image exhibits a body pattern of distinct, somewhat irregular, transverse dark bands. This pattern is inconsistent with the key text description for *Leptodeira annulata*, which specifies ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The zigzag pattern described is fundamentally different from the transverse banding observed in the candidate image. While the head morphology is difficult to compare precisely due to the black and white, high-contrast nature of the candidate image, the dorsal body pattern provides a clear distinguishing feature.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_2993.jpg,"**Verdict:** NO MATCH
+
+**Explanation:** The candidate image shows a snake with distinct, broad, dark transverse bands along its body, which does not match the ""zigzag pattern"" formed by fused dorsal blotches described in the key text for *Leptodeira annulata*. Furthermore, the head in the candidate image appears proportionally smaller with less prominent eyes compared to the large-eyed *Leptodeira annulata* shown in the reference images, and lacks the specific dorsal head patterns visible in figures D and E.",False
+L. annulata_reference.PNG,L. ashmeadii,TAS_3184.jpg,"**NO MATCH**
+
+**Justification:**
+
+1.  **Head Morphology and Patterning:** The head in the Candidate Image displays a highly rugose, granular texture with no distinct patterning. In contrast, the Reference Image of *Leptodeira annulata* shows a smoother head with clear, specific lighter markings and patterns on the dorsal surface (e.g., parietal and frontal regions). The general head shape in the Candidate Image also appears less distinct from the neck compared to *Leptodeira annulata*.
+2.  **Body Patterning and Texture:** The Key Text Description for *Leptodeira annulata* specifies a ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The Candidate Image entirely lacks this pattern. Instead, the visible body section exhibits an extremely rough, tuberculate, or spiny texture that is inconsistent with the typical smooth to weakly keeled scales and blotched pattern of *Leptodeira annulata*.",False
+L. annulata_reference.PNG,L. ornata,ICN-1375.png,"**VERDICT: NO MATCH**
+
+**Justification:**
+
+The candidate image shows significant discrepancies from the reference *Leptodeira annulata*:
+
+1.  **Head Morphology and Scalation:** The head in the candidate image is not distinctly set off from the neck, and the scales appear highly granular and irregular, unlike the smoother, larger dorsal head scales seen in the *Leptodeira annulata* reference images (C, D, E). The eyes, which are clearly visible and relatively large in the reference, are not discernible in the candidate image.
+2.  **Dorsal Body Pattern and Texture:** The candidate image exhibits a highly textured, granular surface along the body, with no evidence of the distinct ""first dorsal blotch with half-moon shape generally fused with other dorsal blotches...forming a zigzag pattern"" as described for *Leptodeira annulata*. The overall skin/scale texture and pattern of the candidate image are fundamentally different from those of a snake.",False
+L. annulata_reference.PNG,L. ornata,ICN_0440.png,"NO MATCH
+
+**Justification:**
+The candidate image does not match the key textual description for *Leptodeira annulata*'s dorsal pattern. The description specifies ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" In contrast, the candidate image displays distinct, somewhat irregular, transverse blotches that are clearly separate and do not form a fused zigzag pattern along the body. While head features are difficult to discern precisely in the candidate image due to its quality, the body pattern alone is a definitive mismatch.",False
+L. annulata_reference.PNG,L. ornata,ICN_10054.jpg,"NO MATCH
+
+**Explanation:**
+The candidate image is a highly stylized, black and white representation that lacks the necessary detail for species verification.
+*   **Head:** The head morphology, scale patterns, and eye characteristics visible in the reference image (C, D, E) are entirely indistinguishable in the candidate image, preventing any comparison.
+*   **Body Pattern:** While the candidate image shows irregular dark patterns that *could* vaguely resemble a zigzag, the critical feature of the ""first dorsal blotch with half-moon shape"" described in the key text cannot be identified or confirmed due to the abstract and low-detail nature of the image.",False
+L. annulata_reference.PNG,L. ornata,ICN_10836.jpg,"**VERDICT: NO MATCH**
+
+**JUSTIFICATION:**
+The Candidate Image's dorsal pattern consists of distinct, somewhat isolated, diamond-shaped blotches. This directly contradicts the key textual description for *Leptodeira annulata*, which states ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" The pattern in the Candidate Image does not show fused, half-moon shaped blotches creating a zigzag; instead, it shows discrete, separated blotches. The head is not visible in the Candidate Image, preventing comparison of head morphology.",False
+L. annulata_reference.PNG,L. ornata,ICN_10842.jpg,"**Verdict: MATCH**
+
+**Explanation:**
+The head of the snake is not visible in the Candidate Image, preventing a direct comparison with the head morphology, scale patterns, and eye characteristics provided in the Reference Image.
+
+However, the visible body pattern in the Candidate Image is consistent with the Key Text Description for *Leptodeira annulata*. The image displays distinct dark dorsal blotches that are clearly fused, forming a continuous, undulating pattern along the body. This strongly corresponds to the description of dorsal blotches ""generally fused with other dorsal blotches... forming a zigzag pattern."" While the specific ""half-moon shape"" of the first dorsal blotch cannot be confirmed due to the image's cropping and style, the overall pattern of fused, zigzagging blotches aligns well with the species' characteristic dorsal ornamentation.",
+L. annulata_reference.PNG,L. ornata,ICN_10875.jpg,"**Verdict:** MATCH
+
+**Explanation:**
+The candidate image, despite being a stylized black and white rendering, exhibits characteristics consistent with *Leptodeira annulata*. The head shows a relatively broad shape, which is typical for the species as seen in the reference images. Crucially, the body pattern in the candidate image features distinct dark blotches separated by lighter bands, and these blotches appear irregular, forming a clear zigzag pattern along the first third of the body. This strongly matches the key text description: ""First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."" While fine details like specific head scale patterns or pupil shape are not discernible due to the image's style, the overall morphology and the highly characteristic dorsal pattern align well with *Leptodeira annulata*.",True
+L. annulata_reference.PNG,L. ornata,ICN_2570.png,"**Verdict:** NO MATCH
+
+**Justification:** While the general head shape and the presence of large eyes in the Candidate Image are broadly consistent with *Leptodeira annulata*, the specific dorsal head pattern differs significantly from the Reference Images (C, D, E). The Candidate Image displays a highly fragmented, abstract, and extensively mottled dark pattern across the dorsal head, which lacks the more consolidated, often symmetrical, and clearly defined dorsal blotches (e.g., heart-shaped or butterfly-like) visible in the reference specimens of *Leptodeira annulata*. Furthermore, the extreme contrast and stylized nature of the Candidate Image preclude a detailed comparison of specific scale patterns. Although the visible neck portion of the Candidate Image does exhibit a zigzag pattern formed by dark blotches, which aligns with part of the key text description for the body, the distinctive head pattern observed in the reference materials is not replicated in the candidate.",False
+L. annulata_reference.PNG,L. ornata,ICN_6192.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The candidate image is a highly stylized, abstract representation that lacks the detail required for species identification based on head morphology, scale patterns, or eye characteristics. Critically, the body pattern in the candidate image does not show distinct dorsal blotches, a half-moon shape, or a clear zigzag pattern formed by fused blotches, which are key diagnostic features described for *Leptodeira annulata*. The pattern appears as irregular, splotchy dark areas, not conforming to the specified pattern.",False
+L. annulata_reference.PNG,L. ornata,TAS_2699.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The candidate image does not match *Leptodeira annulata*. The head morphology, while rendered in high contrast, appears proportionally different from the reference images, lacking the characteristic broadness of *L. annulata*. More significantly, the body pattern in the candidate image consists of distinct, somewhat diamond-shaped or irregular blotches that are separate and do not form the ""zigzag pattern"" described in the key text. The key text explicitly states that the first dorsal blotch (half-moon shaped) is ""generally fused with other dorsal blotches in the first third of body forming a zigzag pattern,"" which is not observed in the candidate image.",False
+L. approximans_reference.PNG,L. annulata,ICN_10067.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image does not match *Leptodeira annulata*. The head morphology is significantly different; the Candidate Image shows an elongated, somewhat pointed head with indistinct eye areas and what appears to be highly textured, granular scaling, lacking the distinct broad head, large eyes, and clear scales visible in the Reference Image. Crucially, the Candidate Image exhibits a highly irregular, textured dorsal surface without any clear, distinct blotches, half-moon shapes, or zig-zag patterns as described in the Key Text Description for *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. annulata,ICN_11065.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+While the candidate image shows a clear zig-zag pattern formed by fused dorsal blotches in the anterior part of the body, which aligns with one aspect of the *Leptodeira annulata* description, it fails to match another specific characteristic. The key text describes the ""first dorsal blotches of the body with a half-moon shape,"" which is not evident in the candidate image; the blotches instead appear more angular and irregular. Furthermore, due to the high-contrast and processed nature of the candidate image, it is not possible to verify key head features such as specific scale patterns or eye characteristics (e.g., pupil shape, relative size) present in the reference images of *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. annulata,ICN_12300.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The head morphology in the Candidate Image differs significantly from the Reference Image of *Leptodeira annulata*. The candidate's head appears more elongated and less distinct from the neck, unlike the broader, more defined head shown in the reference. Furthermore, the body pattern in the Candidate Image, characterized by irregular, splotchy markings, does not match the Key Text Description of ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern.""",False
+L. approximans_reference.PNG,L. annulata,ICN_265.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The candidate image displays a dorsal body pattern characterized by large, blocky, and distinct dark blotches that are not half-moon shaped and do not form a fused zig-zag pattern in the anterior third of the body. This contradicts the key text description for *Leptodeira annulata*, which specifies ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" While head details are obscured by the image style, the body pattern alone is a clear distinguishing feature.",False
+L. approximans_reference.PNG,L. approximans,ICN_13093.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The body pattern of the candidate snake does not match the description for *Leptodeira annulata*. The candidate image displays large, irregular, black blotches that are heavily fused and highly contrasting on a light background, forming a somewhat broken or mottled pattern. This differs from the described ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern"" which characterizes *Leptodeira annulata*. The general coloration of the candidate (stark black and white) also deviates significantly from the typical tawny/brownish base color with darker brown blotches of *L. annulata*. The head is not clearly visible for detailed comparison in the candidate image, but the body pattern alone is sufficient to rule out a match.",False
+L. approximans_reference.PNG,L. ashmeadii,ICN_10463.jpg,"**NO MATCH**
+
+**Explanation:**
+The candidate image does not match *Leptodeira annulata*. While the overall head shape is broadly similar to the dorsal view in the reference image, the critical dorsal body pattern described for *Leptodeira annulata* is absent. The key text describes ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The candidate image, however, displays distinct, somewhat rectangular or rounded dorsal blotches that are separate and do not form a half-moon shape or a zig-zag pattern.",False
+L. approximans_reference.PNG,L. ashmeadii,ICN_11475.jpg,"**VERDICT:** NO MATCH
+
+**Justification:**
+The Candidate Image's head morphology is distinctly different from the *Leptodeira annulata* reference image. The candidate image shows a highly elongated, somewhat spatulate head that is not clearly distinct from the neck, lacking discernible eyes or scale patterns. In contrast, the *Leptodeira annulata* reference image shows a more typical snake head, moderately distinct from the neck, with visible eyes. Furthermore, the body pattern in the Candidate Image consists of irregular, high-contrast black and white blotches, which do not resemble the ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern"" described for *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ashmeadii,ICN_11520.jpg,"NO MATCH
+
+**Justification:**
+While the general head shape in the Candidate Image, with a broad head distinct from the neck and large eyes, shows some superficial resemblance to the Reference Image of *Leptodeira annulata*, the dorsal body pattern in the Candidate Image does not match the Key Text Description. The description specifies ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The Candidate Image displays a highly mottled, granular, and diffuse pattern on the anterior body, lacking the distinct, structured half-moon shaped blotches or a clear zig-zag formation described.",False
+L. approximans_reference.PNG,L. ashmeadii,ICN_13653.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** While the general head shape in the Candidate Image is broadly similar to the reference *Leptodeira annulata*, the body pattern described in the Key Text is not observed. The Candidate Image shows a series of distinct, somewhat rounded or blocky dark dorsal blotches. These blotches do not exhibit the ""half-moon shape"" for the first dorsal blotches, nor do they clearly fuse to form a ""zig-zag pattern"" in the first third of the body as characteristic of *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ashmeadii,ICN_14305.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:** The Candidate Image exhibits a head shape and prominent eyes consistent with the Reference Image of *Leptodeira annulata*. More significantly, the dorsal body pattern in the Candidate Image perfectly matches the key text description, showing distinct half-moon shaped blotches that are fused dorsally in the first third of the body, forming a clear zig-zag pattern.",True
+L. approximans_reference.PNG,L. ashmeadii,ICN_14306.jpg,"**MATCH**
+
+The candidate image is a match for *Leptodeira annulata*. The head morphology, while depicted in high contrast, is generally consistent with the broad head and large eyes of the reference image. Crucially, the dorsal body pattern strongly matches the description: the first dorsal blotches are fused with subsequent blotches, forming a distinct zig-zag pattern along the first third of the body.",True
+L. approximans_reference.PNG,L. ashmeadii,ICN_147.png,"NO MATCH.
+
+The candidate image does not show the head, preventing any comparison with the reference image's head morphology, scale patterns, or eye characteristics. While the candidate image displays a dorsal pattern of dark, somewhat fused blotches that could broadly be considered a zig-zag, it lacks the specific ""half-moon shape"" for the first dorsal blotches described for *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ashmeadii,ICN_2584.png,"**Verdict:** NO MATCH
+
+**Explanation:**
+The head morphology cannot be assessed in the Candidate Image as the head is not clearly visible. However, the dorsal pattern in the Candidate Image does not match the key text description for *Leptodeira annulata*. The text describes ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The Candidate Image shows a series of dark, somewhat irregular, transverse blotches or bands, which do not clearly exhibit a half-moon shape or form the described zig-zag pattern. The pattern appears more as irregular saddle-like blotches rather than the specific zig-zag derived from half-moon shapes.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2435.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:** The candidate image displays head morphology generally consistent with *Leptodeira annulata*, showing a distinct, somewhat triangular head. Crucially, the dorsal pattern on the anterior body of the candidate image strongly matches the key text description for *Leptodeira annulata*: the first dorsal blotches are half-moon shaped and clearly form a zig-zag pattern in the first third of the body.",True
+L. approximans_reference.PNG,L. ashmeadii,TAS_2496.jpg,"**NO MATCH**
+
+The candidate image does not match *Leptodeira annulata*. While the head morphology in the black-and-white image is hard to assess in detail compared to the color reference, the critical distinguishing feature is the body pattern. The reference text describes *Leptodeira annulata* as having ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The candidate image, however, displays large, irregular, broadly connected dark dorsal blotches that do not clearly show a ""half-moon shape"" nor do they form a distinct ""zig-zag pattern."" Instead, they appear as extensive, somewhat transverse bands that are irregularly fused.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2570.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image does not match *Leptodeira annulata*. The head morphology of the candidate snake is distinctly broader and more triangular, and much more distinct from the neck, compared to the moderately distinct head of *Leptodeira annulata* shown in the Reference Image. Furthermore, the dorsal body pattern in the Candidate Image consists of broad, somewhat irregular transverse bands, which does not align with the Key Text Description of *Leptodeira annulata*'s pattern of ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The candidate's pattern lacks the characteristic half-moon shapes and zig-zag fusion.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2633.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The candidate image does not match *Leptodeira annulata*. The head of the snake in the candidate image is broadly triangular and distinctly wider than the neck, which contrasts significantly with the more elongated and less pronounced head in the reference image of *Leptodeira annulata*. Furthermore, the body pattern in the candidate image consists of clear, distinct transverse dark bands, which does not align with the key text description of *Leptodeira annulata* having ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern.""",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2751.jpg,"**Verdict:** MATCH
+
+**Justification:**
+While the highly contrasted, black-and-white nature of the Candidate Image makes a direct comparison of detailed head morphology, specific scale patterns, and eye characteristics with the colored Reference Image challenging, the dorsal body pattern provides a strong match. The Candidate Image clearly displays dark dorsal blotches that are extensively fused and irregular, forming a distinct zig-zag or heavily mottled pattern along the body, particularly in the anterior region. This directly corresponds to the Key Text Description: ""first dorsal blotches of the body... generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern.""",
+L. approximans_reference.PNG,L. ashmeadii,TAS_2753.jpg,"**Verdict:** MATCH
+
+**Explanation:** The candidate image displays a dorsal body pattern perfectly consistent with the key text description for *Leptodeira annulata*. The snake exhibits prominent dark dorsal blotches that are somewhat half-moon shaped and clearly fused laterally to form a distinct zig-zag pattern along the body. While the head morphology in the candidate image is less detailed due to the high-contrast style, its general shape and proportions do not contradict the reference images of *Leptodeira annulata*. The defining body pattern is a strong match.",
+L. approximans_reference.PNG,L. ashmeadii,TAS_2755.jpg,"NO MATCH.
+
+**Explanation:**
+The candidate image does not match the key text description for the dorsal pattern of *Leptodeira annulata*. The text describes ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" In contrast, the candidate image displays distinct, somewhat irregular, and more rectangular or blocky dark dorsal blotches that are arranged in a banded fashion and do not show the characteristic half-moon shape or fusion into a zig-zag pattern. The head features from the reference images are not clearly visible in the candidate image for comparison.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2756.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image does not match *Leptodeira annulata*. The head of the snake in the Candidate Image is narrow and not distinctly set off from the neck, unlike the broader, more triangular head visible in the Reference Image (C, D, E) of *Leptodeira annulata*. Furthermore, the body pattern in the Candidate Image consists of distinct dark transverse bands with a prominent dark longitudinal marking on the neck, which does not align with the Key Text Description of *Leptodeira annulata*'s dorsal pattern, characterized by ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern.""",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2758.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image does not match *Leptodeira annulata*. The head morphology in the Candidate Image shows rough, likely keeled scales and a broader, more triangular shape, which contrasts with the smooth head scales and more elongated head of *Leptodeira annulata* shown in the Reference Image. Furthermore, the body pattern in the Candidate Image is a highly irregular, granular mottling of dark scales, which does not exhibit the ""half-moon shape"" or the ""zig-zag pattern"" formed by fused dorsal blotches as described in the Key Text Description for *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2769.jpg,"**VERDICT: NO MATCH**
+
+**Justification:**
+1.  **Head Morphology:** The head in the Candidate Image appears narrower with relatively smaller eyes compared to the more robust head and larger, more prominent eyes seen in the *Leptodeira annulata* Reference Image. The distinct post-ocular stripe visible in the reference images (C, E) is not clearly discernable in the candidate.
+2.  **Dorsal Pattern:** The Key Text Description for *Leptodeira annulata* specifies ""first dorsal blotches of the body with a half-moon shape"". In the Candidate Image, the dorsal blotches are distinctly triangular or rhomboid, not half-moon shaped. While a zig-zag pattern is present due to the fusion of blotches, the characteristic ""half-moon shape"" of the individual blotches is absent.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2773.jpg,"NO MATCH
+
+**Justification:**
+The candidate image shows a dorsal body pattern composed of distinct, somewhat rectangular or blocky transverse blotches. This does not match the key text description for *Leptodeira annulata*, which specifies ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The head is not visible in the candidate image, precluding comparison of head morphology.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2774.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The Candidate Image displays a pattern of distinct, broad, transverse black bands on a lighter background. This contradicts the description for *Leptodeira annulata*, which states ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The Candidate Image lacks the characteristic half-moon shaped blotches or the zig-zag pattern. Due to the highly stylized nature of the Candidate Image, head morphology details are insufficient for comparison.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2775.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The body pattern shown in the Candidate Image does not match the key description for *Leptodeira annulata*. The description specifies ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The Candidate Image displays broad, irregular, somewhat rectangular, and partially fused dorsal blotches that do not clearly exhibit a half-moon shape or form a distinct zig-zag pattern. The head features in the candidate image are too generalized in the sketch to allow for a detailed comparison with the diagnostic head morphology shown in the reference image.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2776.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The body pattern in the Candidate Image clearly does not match the description for *Leptodeira annulata*. The Key Text describes ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" In contrast, the Candidate Image displays broad, dark bands that appear to encircle the body, lacking any half-moon shaped blotches or a zig-zag pattern. Due to the stylized nature of the Candidate Image, head morphology and scale patterns are too indistinct for a reliable comparison with the Reference Image. However, the distinct dorsal body pattern difference is sufficient to determine a non-match.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2777.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image does not match *Leptodeira annulata*. The image depicts an object with a highly irregular, lumpy, and textured surface that does not resemble snake scales or anatomy. Key features like a distinct head, visible eyes, and typical snake body patterns are entirely absent. The head structure and the dorsal pattern in the Candidate Image are completely dissimilar to the detailed head morphology shown in the Reference Image and the ""half-moon"" and ""zig-zag"" dorsal pattern described for *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2788.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The snake in the Candidate Image does not match *Leptodeira annulata*. The head morphology is significantly different; the candidate image shows a head that is small and not distinctly set off from the neck, in contrast to the broader, more distinct head of *Leptodeira annulata* shown in the Reference Image. Furthermore, the dorsal pattern in the Candidate Image consists of irregular, somewhat banded blotches, which does not align with the key text description of ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The overall body pattern and perceived scale texture also differ from the typical appearance of *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2794.jpg,"VERDICT: NO MATCH
+
+JUSTIFICATION: The Candidate Image is a highly stylized, abstract black and white rendering that lacks the anatomical detail necessary for species identification. There are no discernible head features (eyes, scales, specific shape) to compare with the Reference Image, nor are there any recognizable dorsal blotches or zig-zag patterns on the body to compare with the Key Text Description for *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2860.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image's body pattern features distinct, blocky, transverse blotches that are not half-moon shaped and do not form a zig-zag pattern in the first third of the body. This directly contradicts the key text description for *Leptodeira annulata*, which specifies ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The stylized nature of the head in the Candidate Image prevents a detailed comparison with the Reference Image's head morphology.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2988.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The Candidate Image shows a dorsal pattern characterized by broad, regular, dark transverse bands. This does not align with the Key Text Description for *Leptodeira annulata*, which specifies ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The head is not visible in the Candidate Image, preventing comparison with the Reference Image.",False
+L. approximans_reference.PNG,L. ashmeadii,TAS_2993.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:** The candidate image displays a head morphology consistent with the reference image of *Leptodeira annulata*, featuring a moderately distinct head and relatively large eyes. Crucially, the dorsal body pattern in the candidate image perfectly matches the key text description: the first dorsal blotches behind the head have a half-moon shape and are visibly fused with subsequent blotches in the anterior body, forming a distinct zig-zag pattern.",True
+L. approximans_reference.PNG,L. ashmeadii,TAS_3184.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image does not match *Leptodeira annulata*. The head in the Candidate Image is much broader, more triangular, and appears highly rugose or tuberculate, which contrasts sharply with the smoother head morphology seen in the Reference Image for *L. annulata*. Furthermore, the body in the Candidate Image exhibits a uniform, highly textured (granular/tuberculate) scalation, completely lacking the distinct ""half-moon shape"" and ""zig-zag pattern"" dorsal blotches described for *Leptodeira annulata*.",False
+L. approximans_reference.PNG,L. ornata,ICN-1375.png,"**VERDICT:** MATCH
+
+**JUSTIFICATION:**
+The candidate image's dorsal pattern exhibits large, somewhat half-moon-shaped blotches near the head that are clearly fused with subsequent blotches, forming an irregular, zig-zag pattern down the visible portion of the body. This characteristic strongly aligns with the provided Key Text Description for *Leptodeira annulata*: ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern"". Due to the high-contrast, stylized nature of the candidate image, detailed head morphology, specific scale patterns, and eye characteristics cannot be precisely compared with the photographic reference image. However, the prominent and matching body pattern is sufficient for identification given the limitations.",
+L. approximans_reference.PNG,L. ornata,ICN_0440.png,"NO MATCH
+
+The candidate image shows a snake with irregular, somewhat transverse dorsal blotches or bands that are distinct and do not appear to be fused into a zig-zag pattern. This directly contradicts the key text description for *Leptodeira annulata*, which states ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The head features for comparison are not visible in the candidate image.",False
+L. approximans_reference.PNG,L. ornata,ICN_10054.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image is a highly abstract, black and white rendering that lacks any discernible anatomical features of a snake, including head morphology, scale patterns, or eye characteristics suitable for comparison with the Reference Image. Furthermore, the body pattern in the Candidate Image does not exhibit the specific ""half-moon shape"" dorsal blotches or the ""zig-zag pattern"" described in the Key Text Description for *Leptodeira annulata*. It is impossible to confirm the species from such a stylized representation.",False
+L. approximans_reference.PNG,L. ornata,ICN_10836.jpg,"NO MATCH
+
+**Explanation:**
+The head morphology in the Candidate Image appears more attenuated and less distinct from the neck compared to the broader, more defined head shown in the Reference Image of *Leptodeira annulata*. More importantly, the dorsal pattern in the Candidate Image does not match the Key Text Description for *Leptodeira annulata*. The text describes ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The Candidate Image displays a pattern of somewhat isolated, irregular, dark blotches/bands, which lack the described half-moon shape and do not form a distinct zig-zag pattern.",False
+L. approximans_reference.PNG,L. ornata,ICN_10842.jpg,"**NO MATCH**
+
+**Explanation:**
+The head of the snake in the Candidate Image is not visible for comparison. However, the body pattern displayed in the Candidate Image does not match the key text description for *Leptodeira annulata*. The description specifies ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The Candidate Image shows a pattern of highly irregular, fragmented, and somewhat transverse dark blotches that do not clearly exhibit the described half-moon shapes or a distinct zig-zag pattern.",False
+L. approximans_reference.PNG,L. ornata,ICN_10875.jpg,"**Verdict:** MATCH
+
+**Justification:** The Candidate Image exhibits a clear dorsal pattern on the body consistent with *Leptodeira annulata*, specifically showing ""first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern."" The head morphology, while not as detailed as the reference, shows a distinct head broader than the neck, which is generally consistent with *Leptodeira* species. The strong match in the distinctive body pattern described in the key text supports the identification.",
+L. approximans_reference.PNG,L. ornata,ICN_2570.png,"NO MATCH
+
+**Justification:**
+The candidate image does not match the key text description for *Leptodeira annulata*. Specifically, the first dorsal blotches of the body in the candidate image do not exhibit the described ""half-moon shape."" Instead, they appear as more irregular, broadly rounded, or somewhat rectangular transverse blotches. While there is a zig-zagging pattern of blotches, the distinct ""half-moon"" initial blotch shape is absent. The head features are too indistinct in the candidate image to make a detailed comparison with the reference images.",False
+L. approximans_reference.PNG,L. ornata,ICN_6192.jpg,"**Verdict:** MATCH
+
+**Justification:** The candidate image displays a head morphology consistent with the reference images of *Leptodeira annulata*, exhibiting a distinct, somewhat rounded head. Crucially, the dorsal body pattern in the candidate image strongly matches the key text description: the first dorsal blotches behind the head have a half-moon shape, and these blotches are clearly fused, forming a prominent zig-zag pattern along the anterior third of the body. While the black and white nature of the candidate image prevents detailed comparison of scale coloration or precise pupil shape, the overall head structure and the distinctive body pattern are highly characteristic of *Leptodeira annulata*.",True
+L. approximans_reference.PNG,L. ornata,TAS_2699.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:** The candidate image displays a dorsal body pattern characterized by distinct, somewhat half-moon shaped blotches that appear fused, forming a prominent zig-zag pattern down the visible portion of the body, which is highly consistent with the key text description for *Leptodeira annulata*. The general head morphology, including the relatively large eyes and head shape, is also consistent with the provided reference images of *Leptodeira annulata*.",
+L. ashmeadii_reference.PNG,L. annulata,ICN_10067.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image is a stylized, black and white drawing that lacks the necessary detail for species verification. Key diagnostic features described for *Leptodeira annulata*, such as ""two dark brown parallel stripes in the parietal region"" and ""two occipital stripes extend to the body and fuse with the first dorsal blotch,"" cannot be confidently identified or verified due to the absence of color and the highly abstract nature of the patterns in the drawing. Head morphology, scale patterns, and eye characteristics are also indistinguishable.",False
+L. ashmeadii_reference.PNG,L. annulata,ICN_11065.jpg,"VERDICT: **NO MATCH**
+
+**Justification:**
+
+The candidate image does not match the key dorsal pattern description for *Leptodeira annulata*. While the reference images (C, D, E, F) show variations, they generally align with the description of ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch.""
+
+In contrast, the candidate image, due to its high-contrast, black-and-white rendition, presents large, irregular black blotches on the head and neck. These markings do not resolve into distinct, parallel stripes in the parietal region or clear occipital stripes extending to fuse with a first dorsal blotch in the manner described. The pattern appears more amorphous and less structured than the diagnostic features of *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. annulata,ICN_12300.jpg,"**MATCH**
+
+The candidate image is a match for *Leptodeira annulata*. The prominent dark markings on the back of the head clearly extend backward and fuse with the first large dorsal blotch on the body, which perfectly aligns with the key text description: ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" The overall head shape and the presence of a distinct dorsal pattern on the head (interpreted as the described parallel stripes, though simplified by the image's binarization) are also consistent with the reference images.",True
+L. ashmeadii_reference.PNG,L. annulata,ICN_265.jpg,"**VERDICT:** NO MATCH
+
+**EXPLANATION:** The candidate image does not display the characteristic ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" that are clearly visible in the *Leptodeira annulata* reference images (e.g., C and E) and explicitly described in the key text. Furthermore, the body pattern of the candidate image, showing distinct transverse blotches, does not appear to originate from ""two occipital stripes extend[ing] to the body and fus[ing] with the first dorsal blotch"" as described for *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. approximans,ICN_13093.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:**
+The candidate image displays a dorsal head pattern with a prominent dark blotch in the parietal/occipital region, which is consistent with the variations observed in the *Leptodeira annulata* reference images (e.g., similar to images C and E, showing a strong dark marking in this area). Crucially, the dark occipital marking in the candidate image clearly extends posteriorly onto the neck and seamlessly fuses with the first prominent dorsal blotch on the body, which perfectly matches the key text description for *Leptodeira annulata*: ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" The subsequent series of large, dark dorsal blotches on the body is also characteristic of the species.",True
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_10463.jpg,"**MATCH**
+
+The Candidate Image is a match for *Leptodeira annulata*.
+
+**Justification:**
+The candidate image exhibits a head morphology and relatively large eye characteristic of *Leptodeira annulata*. Crucially, the dorsal pattern on the neck region clearly shows two distinct, parallel dark stripes originating from the occipital region and extending onto the body, perfectly matching the key text description: ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch.""",True
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_11475.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:** Despite being a high-contrast black and white rendering, the Candidate Image displays key pattern features consistent with *Leptodeira annulata*. The dorsal view of the head clearly shows two prominent, somewhat parallel dark markings on the posterior (parietal/occipital) region. These markings visibly extend onto the anterior part of the body, merging into the overall body pattern. This characteristic pattern aligns with the Key Text Description: ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch."" The general head shape is also consistent with the reference images provided.",
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_11520.jpg,"**VERDICT:** NO MATCH
+
+**EXPLANATION:** While the general head morphology of the candidate image is somewhat consistent, the dorsal head and nuchal pattern does not match the key diagnostic features of *Leptodeira annulata*. The candidate image displays a highly irregular, mottled, and fragmented pattern on the head and neck. It lacks the distinct ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and subsequently extend to the body, as explicitly described in the key text and clearly visible in reference images C and E.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_13653.jpg,"**VERDICT:** MATCH
+
+**EXPLANATION:** The candidate image displays a head morphology consistent with *Leptodeira annulata*. Most importantly, the dorsal pattern on the neck and anterior body precisely matches the key text description: ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" This distinctive pattern is clearly visible in the candidate image, with two dark markings originating from the occipital region that then merge into the first prominent dorsal blotch on the body.",True
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_14305.jpg,"VERDICT: **NO MATCH**
+
+**Explanation:**
+
+The Candidate Image does not match the key dorsal pattern description for *Leptodeira annulata*. The reference text specifically states that ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" In the Candidate Image, there are no distinct parallel occipital stripes extending from the head onto the neck to fuse with the first dorsal blotch. Instead, the first dorsal blotch appears as a broad, somewhat irregular dark band immediately posterior to the head's dark cap, without the characteristic connecting stripes. While the head shape and general dorsal blotched pattern are somewhat generic, the absence of this specific occipital stripe feature is a clear discrepancy.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_14306.jpg,"NO MATCH.
+
+The Candidate Image does not match *Leptodeira annulata*. The Key Text Description specifies that for *Leptodeira annulata*, ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" In the Candidate Image, the area immediately behind the head shows a broad, continuous dark blotch that covers the entire width of the neck, without clear evidence of two distinct occipital stripes extending and then fusing to form it.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_147.png,"**VERDICT:** MATCH
+
+**JUSTIFICATION:**
+The candidate image displays a dorsal body pattern that strongly matches the key text description for *Leptodeira annulata*. Specifically, immediately posterior to the head, there are two distinct dark markings which appear to be occipital stripes extending onto the body and fusing with the first prominent dorsal blotch. This characteristic ""two occipital stripes extend to the body and fuse with the first dorsal blotch"" is clearly visible in the candidate image, even in its high-contrast, black-and-white format. While direct comparison of head scale patterns with the color reference images is difficult due to the candidate image's processing, the defining body pattern feature is unequivocally present.",True
+L. ashmeadii_reference.PNG,L. ashmeadii,ICN_2584.png,"NO MATCH
+
+**Justification:** The Candidate Image does not exhibit the key dorsal head and anterior body pattern described for *Leptodeira annulata*. While the overall head shape is somewhat consistent, the specific pattern of ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch"" is not discernibly present. Instead, the posterior head and nuchal region in the Candidate Image appear to have a broad, somewhat irregular dark blotch that forms the first body band, rather than distinct parallel stripes merging into it. This difference in the specific head and neck pattern leads to a non-match.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2435.jpg,"MATCH
+
+**Explanation:** The candidate image displays the defining dorsal pattern for *Leptodeira annulata*: two prominent dark, parallel stripes originating from the parietal/occipital region of the head. These stripes clearly extend down the neck and appear to fuse with the first dorsal blotch, precisely matching the key text description and the patterns observed in the reference images (C, D, E, F).",
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2496.jpg,"NO MATCH
+
+**Explanation:**
+The Candidate Image does not display the head, which is the primary feature shown in the provided Reference Images (C, D, E, F) for *Leptodeira annulata*. Therefore, no comparison can be made regarding head morphology, scale patterns, or eye characteristics.
+
+Furthermore, the Key Text Description states ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" The dorsal pattern visible in the Candidate Image, at the point where the head would connect, begins with a broad, single dark blotch, and does not clearly show two distinct stripes extending from the occipital region and fusing into this first blotch. The overall pattern of large, irregular dark blotches separated by lighter bands is too generic to confirm the specific diagnostic feature described for the head-body transition of *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2570.jpg,"**Verdict:** MATCH
+
+**Explanation:** The candidate image displays key features consistent with *Leptodeira annulata*. The head morphology, including its general shape and the presence of large, prominent eyes, aligns with the characteristics observed in the reference images (C-F). Crucially, the dorsal pattern on the neck and anterior body of the candidate snake strongly matches the provided key text description: there are clearly visible ""two occipital stripes extend[ing] to the body and fus[ing] with the first dorsal blotch."" This distinctive pattern is a clear diagnostic feature present in the candidate image. While the exact head pattern in the parietal region is harder to definitively assess in the black and white image, the unmistakable occipital and body pattern correspondence solidifies the identification.",True
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2633.jpg,"**VERDICT:** NO MATCH
+
+**Explanation:** The candidate image does not display the key head and anterior body pattern features characteristic of *Leptodeira annulata*. Specifically, the candidate image lacks the ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and the distinct ""two occipital stripes extend to the body and fuse with the first dorsal blotch"" as described in the key text. Instead, the head pattern in the candidate image appears more uniformly mottled and indistinct, without clear parallel or occipital stripes leading to the body bands. The reference images, while showing some variation, generally exhibit more defined head markings than those visible in the candidate.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2751.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The candidate image does not exhibit the characteristic dorsal pattern described for *Leptodeira annulata*. The Key Text describes ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" In the candidate image, the head and anterior body are heavily mottled with irregular dark blotches, lacking the distinct parallel stripes on the parietal region and the clear, organized occipital stripes fusing with a defined first dorsal blotch that are characteristic of the species, as seen in the reference images and described.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2753.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The candidate image displays prominent, broad transverse dark bands on the anterior body, extending from immediately behind the head. This pattern directly contradicts the key text description for *Leptodeira annulata*, which specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch."" Such parallel longitudinal stripes forming the initial dorsal pattern are absent in the candidate image. Due to the high-contrast black and white nature of the candidate image, detailed head scale morphology is difficult to compare with the reference images, but the body pattern discrepancy is definitive.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2755.jpg,"**Verdict:** NO MATCH
+
+**Explanation:** While the general head shape and banded body pattern of the Candidate Image bear some resemblance to *Leptodeira annulata*, it does not clearly exhibit the specific diagnostic head and anterior body pattern described in the Key Text. The Key Text specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and that ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" In the Candidate Image, the posterior head and neck region appear as a continuous, broad dark blotch, making it difficult to discern two distinct parallel stripes on the parietals/occipitals, or to clearly observe two separate occipital stripes extending and *then* fusing with the first dorsal blotch. The transition from head to body pattern in the Candidate Image appears more as a direct continuation of a single broad dark band rather than the described two-stripe fusion.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2756.jpg,"**VERDICT:** MATCH
+
+**EXPLANATION:** The Candidate Image displays a distinct dark marking on the head in the parietal/occipital region that clearly extends posteriorly and fuses with the prominent first dark dorsal blotch on the body. This pattern is a direct match with the key text description: ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" While the ""two dark brown parallel stripes in the parietal region"" are more ambiguous in the black and white candidate, the overall pattern and the connection to the first dorsal blotch are consistent with the reference materials and characteristic of *Leptodeira annulata*. The general head morphology and banded body pattern are also consistent with the species.",
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2758.jpg,"NO MATCH.
+
+**Explanation:**
+
+The Candidate Image does not match *Leptodeira annulata* based on head pattern and scale characteristics.
+
+1.  **Head Pattern:** The Key Text Description specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and are visible in the Reference Images (e.g., C and E). The Candidate Image's head features a highly mottled, irregular pattern with no discernible parallel stripes in the parietal or occipital regions.
+2.  **Body Pattern:** The Key Text Description mentions ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" The Candidate Image shows a chaotic, mottled pattern immediately posterior to the head, lacking any clear, organized occipital stripes extending into a distinct first dorsal blotch.
+3.  **Scale Texture:** While not explicitly in the text description, *Leptodeira annulata* typically has smooth or only weakly keeled dorsal scales. The Candidate Image exhibits extremely rough, heavily textured (likely keeled) dorsal scales, which is inconsistent with *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2769.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image does not match *Leptodeira annulata*. The key text description for *Leptodeira annulata* mentions ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch"". The Candidate Image, a high-contrast black and white drawing, shows a largely dark (black) head followed by a prominent white nuchal (neck) band or collar, and then distinct dark bands on the body. This pattern does not exhibit the described parallel parietal and occipital stripes extending and fusing with a first dorsal blotch. Instead, it presents a stark dark head, a clear light collar, and then distinct body banding. This differs significantly from the more diffuse or blotchy head patterns visible in the *Leptodeira annulata* reference images (C, D, E, F) and the explicit description of the occipital stripes' continuation onto the body.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2773.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+While the candidate image displays a banded body pattern and a dark marking on the back of the head that extends to the first dorsal blotch, which are generally consistent with *Leptodeira annulata*, it fails to clearly show a key diagnostic feature described in the reference materials. The Key Text Description explicitly mentions ""two dark brown parallel stripes in the parietal region which run toward the occipitals."" In the Candidate Image, the head pattern is represented by a large, somewhat irregular, and diffuse dark blotch, rather than clearly discernible ""two dark brown parallel stripes"" on the parietal region as seen in the Reference Images (e.g., C and E). This lack of clarity for the specific parietal stripe pattern prevents a definitive match.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2774.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+The candidate image displays a snake with distinct, wide, and regularly alternating black and white bands along its body. This pattern does not align with the description for *Leptodeira annulata*, which typically exhibits a series of dark dorsal blotches or saddles on a lighter ground color, with ""two occipital stripes extend[ing] to the body and fus[ing] with the first dorsal blotch."" The broad, clean, circumferential banding of the candidate snake's body is inconsistent with the characteristic blotched pattern of *Leptodeira annulata*. While the head features in the stylized candidate image are difficult to assess for specific scale patterns, the body pattern alone provides a clear distinction.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2775.jpg,"**Verdict:** NO MATCH
+
+**Explanation:** The candidate image's head morphology appears narrower and more elongated than typical *Leptodeira annulata* as depicted in the reference images (C-F). More significantly, the dorsal pattern on the head and neck in the candidate image does not match the key text description. The text specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" The candidate image, however, shows a solid, uniform dark cap on the head that extends down the neck as a broad, continuous dark patch before breaking into body blotches. There is no clear indication of distinct parallel parietal or occipital stripes that extend and fuse with the first dorsal blotch as described for *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2776.jpg,"**NO MATCH**
+
+The Candidate Image does not match *Leptodeira annulata*.
+
+**Justification:**
+
+1.  **Head Pattern:** The Candidate Image displays a large, solid, dark cap-like pattern covering most of the head dorsally. This contrasts significantly with the Reference Image examples (C-F), which show more defined, often U-shaped or two-striped patterns on the parietal region, and also contradicts the Key Text Description of ""two dark brown parallel stripes in the parietal region.""
+2.  **Neck Pattern:** Most critically, the Candidate Image features a very prominent, wide, solid white band immediately posterior to the head, completely encircling the neck. This directly contradicts the Key Text Description, which states ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" The presence of this distinct white neck band prevents any such occipital stripes from extending and fusing with a dorsal blotch, a defining characteristic of *Leptodeira annulata*. This feature is also absent in the general appearance implied by the reference images.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2777.jpg,"**VERDICT:** NO MATCH
+
+**Explanation:**
+The candidate image does not exhibit the key dorsal head pattern characteristic of *Leptodeira annulata*. Specifically, it lacks the ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" described in the key text and clearly visible in reference images C and E. Instead, the candidate image displays a large, irregular dark blotch covering much of the posterior head and nape, which is inconsistent with the diagnostic pattern for *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2788.jpg,"**MATCH**
+
+The Candidate Image is a match for *Leptodeira annulata*.
+
+**Explanation:**
+
+Despite the monochromatic and stylized nature of the Candidate Image, the key dorsal pattern described in the reference materials is clearly discernible. The image shows two prominent dark (black) longitudinal stripes originating from the head (parietal/occipital region) which run parallel and extend onto the neck, appearing to fuse with the first dorsal blotch. This precisely matches the description: ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch,"" as well as the visual pattern seen in the colored reference images (C, D, E, F). The general head shape is also consistent with the genus *Leptodeira*.",True
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2794.jpg,"NO MATCH
+
+**Justification:** The Candidate Image, due to its highly stylized and low-detail black-and-white representation, lacks the necessary resolution to evaluate head morphology, scale patterns, or eye characteristics against the Reference Image. Crucially, the dorsal pattern on the head and visible body section in the Candidate Image does not clearly display the ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" or the ""two occipital stripes extend to the body and fuse with the first dorsal blotch"" as described in the key text and evident in the detailed Reference Images (C, D, E, F). The pattern appears more as an irregular, mottled dark area rather than defined parallel stripes.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2860.jpg,"VERDICT: **NO MATCH**
+
+**Explanation:**
+The candidate image does not match the key text description of *Leptodeira annulata*'s dorsal pattern. The reference text specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch."" The candidate image, while depicting a banded snake, shows a largely dark and somewhat amorphous head pattern that transitions into a broad, dark collar or the first body blotch directly. It lacks the clear definition of ""two dark brown parallel stripes"" on the parietal/occipital region and the specific manner of their fusion with the first dorsal blotch as described. The stylized nature of the candidate image also prevents detailed comparison of head scale patterns or eye characteristics seen in the photographic reference images.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2988.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The Candidate Image is a black and white, high-contrast illustration lacking the detail necessary to verify the key diagnostic features for *Leptodeira annulata*. Specifically, the distinct ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and their extension to ""fuse with the first dorsal blotch"" (as described in the key text and visible in the color Reference Image heads C, D, E, F) cannot be discerned in the monochrome Candidate Image. While the Candidate Image shows a banded body pattern, the critical head pattern features required for verification are absent due to the image's quality and stylization.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_2993.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+
+While the general head shape in the Candidate Image (distinct from the neck, somewhat triangular) is broadly consistent with the Reference Image of *Leptodeira annulata*, the key diagnostic feature related to the dorsal pattern described in the text does not align.
+
+The Key Text Description states: ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch.""
+
+In the Candidate Image, the pattern immediately behind the head on the neck is a prominent, wide, solid dark blotch or band. This blotch does not clearly show evidence of being formed by ""two occipital stripes extending to the body and fusing."" Instead, it appears as a singular, complete band. The black and white, high-contrast nature of the image makes it difficult to discern subtle head patterns like parallel parietal stripes, but the distinct, solid neck band is clearly visible and does not match the described formation of the first dorsal blotch from merging occipital stripes.",False
+L. ashmeadii_reference.PNG,L. ashmeadii,TAS_3184.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image does not exhibit the key dorsal head and neck pattern diagnostic of *Leptodeira annulata*. The reference materials clearly show ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" This characteristic stripe pattern is entirely absent in the Candidate Image, which instead shows a uniformly textured, mottled dark pattern on the head and neck, lacking any distinct parallel markings.",False
+L. ashmeadii_reference.PNG,L. ornata,ICN-1375.png,"**Verdict:** NO MATCH
+
+**Explanation:**
+The Candidate Image does not clearly display the key dorsal head pattern described for *Leptodeira annulata*. The Key Text Description specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals."" While the Reference Image (specifically examples C and E) illustrates these distinct parallel stripes, the Candidate Image, due to its stylized, high-contrast black and white nature, fails to show any clear, parallel stripes. Instead, the dorsal head pattern in the Candidate Image appears as a broad, somewhat irregular dark area with texture, lacking the defined bilateral striping characteristic of the species' head. The extreme stylization also prevents verification of other crucial features such as scale patterns or pupil shape.",False
+L. ashmeadii_reference.PNG,L. ornata,ICN_0440.png,"**Verdict:** NO MATCH
+
+**Explanation:**
+The candidate image does not match the description of *Leptodeira annulata*. While the head shape in the candidate image is somewhat consistent with a colubrid, the crucial dorsal body pattern described for *Leptodeira annulata* is not observed. The key text specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch."" In contrast, the candidate image clearly shows a prominent light band (nuchal collar) immediately posterior to the head, separating the head from the first distinct dark dorsal blotch. This pattern (light nuchal collar followed by distinct dark blotches) does not align with the description of occipital stripes extending and fusing directly with the first dorsal blotch, which implies a continuous dark marking from the head into the first body blotch rather than an intervening light collar.",False
+L. ashmeadii_reference.PNG,L. ornata,ICN_10054.jpg,"**NO MATCH**
+
+**Explanation:**
+The Candidate Image is an abstract, stylized black and white rendering and does not present any identifiable biological features such as scale patterns, eye characteristics, or specific color patterns of a snake's head or body. It lacks the realistic detail required to compare against the photographic reference images of *Leptodeira annulata* (C, D, E, F) or the specific dorsal pattern described in the key text (""two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch"").",False
+L. ashmeadii_reference.PNG,L. ornata,ICN_10836.jpg,"VERDICT: **NO MATCH**
+
+JUSTIFICATION:
+The candidate image does not display the specific head and neck pattern described in the Key Text Description for *Leptodeira annulata*. Specifically, the candidate image lacks ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" Instead, the candidate image shows more diffuse dark markings on the head transitioning into a series of distinct, somewhat rounded or oval dorsal blotches, which does not precisely align with the described stripe-to-blotch fusion pattern. While the general presence of dorsal blotches is consistent with *Leptodeira annulata*, the critical identifying features of the head and neck pattern are not discernible or do not match the detailed description.",False
+L. ashmeadii_reference.PNG,L. ornata,ICN_10842.jpg,"MATCH
+
+**Explanation:**
+While specific head morphology and eye characteristics are not discernible in the abstract Candidate Image, the key dorsal pattern described is clearly visible. The Candidate Image shows two dark, roughly parallel longitudinal stripes originating from the anterior (neck/occipital) region which then extend and fuse into the first prominent dorsal blotch on the body. This feature is a direct match for the key text description: ""two occipital stripes extend to the body and fuse with the first dorsal blotch"".",True
+L. ashmeadii_reference.PNG,L. ornata,ICN_10875.jpg,"**VERDICT:** MATCH
+
+**Explanation:**
+The Candidate Image is a match for *Leptodeira annulata*. While the highly stylized, high-contrast nature of the candidate image obscures specific head morphology, scale patterns, and eye characteristics, making a precise comparison with the Reference Image and the description of ""two dark brown parallel stripes in the parietal region"" challenging, the overall body pattern is a strong indicator. The Candidate Image clearly exhibits prominent, alternating dark and light transverse bands or blotches on its body, which is the defining ""annulated"" pattern characteristic of *Leptodeira annulata*. The general transition from the head to the body with a dark neck region leading into the banded pattern is broadly consistent with the text description of occipital stripes fusing with the first dorsal blotch, even if the stripe details are not discernible.",True
+L. ashmeadii_reference.PNG,L. ornata,ICN_2570.png,"VERDICT: **NO MATCH**
+
+The Candidate Image does not match *Leptodeira annulata*. The most significant discrepancy is in the dorsal head and neck pattern. The Key Text Description and the Reference Image (C, D, E) clearly show ""two dark brown parallel stripes in the parietal region which run toward the occipitals,"" extending to the body and fusing with the first dorsal blotch. In contrast, the Candidate Image displays a broad, unified dark patch on the posterior head and neck, lacking the distinct parallel stripes characteristic of *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. ornata,ICN_6192.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+
+The candidate image exhibits a highly irregular, fragmented, and blotchy dark pattern across both its head and body. This does not align with the key description for *Leptodeira annulata*, which specifies ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" and ""two occipital stripes extend to the body and fuse with the first dorsal blotch."" These distinct, organized stripe and blotch features are not visible in the candidate image. The pattern in the candidate image appears much more diffuse and chaotic compared to the structured patterns seen in the reference heads (e.g., E) and described for *Leptodeira annulata*.",False
+L. ashmeadii_reference.PNG,L. ornata,TAS_2699.jpg,"**MATCH**
+
+The Candidate Image is a match for *Leptodeira annulata*.
+
+**Explanation:**
+The black and white Candidate Image, despite its high contrast and lack of color, exhibits key characteristics consistent with *Leptodeira annulata*. The prominent dark markings on the posterior head/occipital region align with the ""two dark brown parallel stripes in the parietal region which run toward the occipitals"" described in the text. These markings clearly extend onto the body and fuse with the first dorsal blotch, forming a distinct patterned body. This overall arrangement of head markings transitioning into dorsal blotches is a hallmark of the species, as seen in the Reference Images and described in the Key Text.",True
+L. ornata_reference.PNG,L. annulata,ICN_10067.jpg,"NO MATCH.
+
+The Candidate Image is a highly stylized, monochrome, and textured rendering that lacks the anatomical detail, coloration, and pattern required for species identification. It does not show discernible head scales, eye morphology, or the specific ""light brown occipital region with medial wide line"" dorsal pattern described in the key text and implied by the reference image.",False
+L. ornata_reference.PNG,L. annulata,ICN_11065.jpg,"**VERDICT:** NO MATCH
+
+**Justification:**
+
+The candidate image shows a prominent, wide, dark blotch covering the occipital region and extending onto the neck. This directly contradicts the key text description for *Leptodeira annulata*, which states ""occipital region light brown with medial wide line."" The reference images (C, D, E) also show the occipital region of *Leptodeira annulata* as predominantly light brown or tan, with some darker markings, but not a large, entirely dark blotch as seen in the candidate image. While the overall blotched body pattern in the candidate image has some general resemblance to *L. annulata*, the specific detail regarding the occipital region is a clear mismatch.",False
+L. ornata_reference.PNG,L. annulata,ICN_12300.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image is a highly stylized, black and white representation that lacks the necessary detail for species verification. Specific diagnostic features such as head scale patterns, eye characteristics (e.g., pupil shape), and precise coloration (e.g., ""light brown"" occipital region) cannot be discerned. Crucially, the key text description ""occipital region light brown with medial wide line"" cannot be verified due to the absence of color and the generalized, mottled pattern in the Candidate Image, which does not show a distinct medial line or a consistent ""light brown"" base. While the general head shape is somewhat consistent, the lack of definitive details makes a positive identification impossible.",False
+L. ornata_reference.PNG,L. annulata,ICN_265.jpg,"**Verdict:** MATCH
+
+**Justification:** The Candidate Image exhibits a head shape and a distinct dorsal head pattern consistent with *Leptodeira annulata*. Specifically, the occipital region appears light with a clear medial wide dark line, which matches both the Reference Image (panels C and E) and the provided Key Text Description. The visible body pattern with dark bands is also characteristic of the species.",True
+L. ornata_reference.PNG,L. approximans,ICN_13093.jpg,"**VERDICT: NO MATCH**
+
+**Explanation:**
+
+The Candidate Image is a highly stylized, black and white representation, which limits the ability to compare fine details such as eye characteristics or specific scale patterns seen in the Reference Image. However, based on the Key Text Description for the dorsal pattern:
+
+1.  **Head Pattern (Occipital Region):** The Key Text describes the *Leptodeira annulata* as having an ""occipital region light brown with medial wide line."" The Reference Image (C, E) confirms a lighter brown background on the top of the head with a suggestion of a medial lighter area. In stark contrast, the Candidate Image shows a solid, broad dark (black) blotch covering the entire occipital region and extending onto the neck, completely lacking any light brown color or a medial light line.",False
+L. ornata_reference.PNG,L. ashmeadii,ICN_10463.jpg,"**NO MATCH**
+
+The candidate image does not match *Leptodeira annulata*.
+
+**Justification:**
+
+The most significant discrepancy lies in the dorsal head pattern, specifically the occipital region. The key text description states ""occipital region light brown with medial wide line,"" and the reference images (C and E) show a relatively lighter occipital area. In stark contrast, the candidate image depicts an occipital region that is predominantly dark, almost entirely black, completely lacking the described light brown base or a prominent medial line. Additionally, the transition from head to neck in the candidate image shows irregular dark blotches rather than the somewhat clearer nuchal collar often seen in the reference specimens (e.g., C).",False
+L. ornata_reference.PNG,L. ashmeadii,ICN_11475.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image does not match *Leptodeira annulata* based on several key features:
+
+*   **Head Morphology:** The head in the Candidate Image appears narrower and more elongated/club-like, lacking the distinct, somewhat broader and more rounded-snout shape seen in the *Leptodeira annulata* Reference Image (C, E).
+*   **Head Pattern:** The Reference Image and Key Text describe an ""occipital region light brown with medial wide line."" The Candidate Image, being high-contrast black and white, shows large, irregular black blotches covering much of the dorsal head, with no discernible light brown background or a medial wide line.
+*   **Eye Characteristics:** The Candidate Image is too abstract and high-contrast to discern any eye features, such as the large eyes typical of *Leptodeira annulata*.
+*   **Body Pattern:** The visible anterior body of the Candidate Image displays a highly textured, irregular black and white blotchy pattern, which is not consistent with the typical banded or blotched pattern of *Leptodeira annulata*.",False
+L. ornata_reference.PNG,L. ashmeadii,ICN_11520.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+
+While the general head shape in the Candidate Image (wider than the neck) is somewhat consistent with *Leptodeira annulata*, the image lacks the necessary detail to confirm a match. Crucially, the black-and-white, high-contrast processing of the Candidate Image renders the key dorsal pattern indistinguishable. The reference materials describe the ""occipital region light brown with medial wide line"" (visible as a distinct darker stripe in Reference Image C and E). This specific pattern is entirely absent or unidentifiable as a ""medial wide line"" in the Candidate Image, which instead shows a highly mottled, irregular texture without any discernible pattern. The fine scale details and eye characteristics, which are clear in the color reference images, are also completely lost in the Candidate Image, preventing proper comparison.",False
+L. ornata_reference.PNG,L. ashmeadii,ICN_13653.jpg,"**Verdict:** MATCH
+
+**Explanation:**
+The candidate image displays a general head morphology consistent with *Leptodeira annulata*, with a head that is somewhat distinct from the neck. Crucially, the visible body pattern of large, prominent dark saddle-like blotches on a lighter background is highly characteristic and a strong match for the annulated pattern typically found in *Leptodeira annulata*. While specific details of the head pattern described in the key text, such as the ""occipital region light brown with medial wide line,"" cannot be verified in the black and white silhouette, the visible features strongly align with the target species.",True
+L. ornata_reference.PNG,L. ashmeadii,ICN_14305.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+The **Key Text Description** for *Leptodeira annulata* specifies the ""occipital region light brown with medial wide line."" In the **Candidate Image**, the occipital region (the area immediately behind the head) is predominantly dark (black) and transitions into a series of large, dark body blotches. This coloration directly contradicts the ""light brown"" description for the occipital region. While the overall body pattern of distinct dark saddles on a lighter background in the Candidate Image is typical for the genus *Leptodeira*, the specific pattern of the occipital region, as described in the key text, is not present. The **Reference Images** (C, E) also show a generally lighter dorsal head and nape region, which further contrasts with the dark occipital area of the Candidate Image.",False
+L. ornata_reference.PNG,L. ashmeadii,ICN_14306.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+The candidate image is highly stylized, black-and-white, and lacks the critical detail required for species verification.
+
+*   **Head:** The reference images (C, D, E, F) clearly show characteristic head features of *Leptodeira annulata*, including large eyes with what appear to be vertically elliptical pupils (though constricted, they suggest this shape), distinct head scalation, and specific markings like a post-ocular stripe (visible in D, F). The candidate image, however, is too abstract; the eyes are rendered as simple dark spots, precluding observation of pupil shape or relative size. No distinct head scale patterns or specific head markings are discernible.
+*   **Body (Occipital Region):** The Key Text Description specifies ""occipital region light brown with medial wide line."" Since the candidate image is black and white, the ""light brown"" color cannot be assessed. Additionally, the stylized nature of the image makes it impossible to discern a ""medial wide line"" or any fine pattern detail within the occipital region, which appears as part of a broad dark band immediately posterior to the head. While the candidate image shows a generally banded body pattern, which is consistent with *Leptodeira annulata*, the lack of specific diagnostic features for both the head and the detailed occipital pattern prevents a confident match.",False
+L. ornata_reference.PNG,L. ashmeadii,ICN_147.png,"VERDICT: **MATCH**
+
+**Justification:**
+While the Candidate Image lacks sufficient detail of the head (eyes, specific head scales, or the occipital region's medial line) for a direct comparison with the specific head features presented in the Reference Image and Key Text Description, the visible body pattern strongly matches *Leptodeira annulata*.
+
+**Matching Features:**
+*   **Neck Pattern:** The prominent dark band immediately posterior to the head in the Candidate Image is consistent with the dark collar/neck band visible in the Reference Image (C, E).
+*   **Dorsal Body Pattern:** The Candidate Image displays a distinct banded/blotched pattern with wide, irregular dark bands alternating with lighter interspaces. This characteristic dorsal pattern is typical for *Leptodeira annulata*.",True
+L. ornata_reference.PNG,L. ashmeadii,ICN_2584.png,"**Verdict:** NO MATCH
+
+**Explanation:**
+The general head shape in the Candidate Image is broadly consistent with the reference *Leptodeira annulata*. However, detailed comparison of head scale patterns, eye characteristics, and specific markings is not possible due to the low resolution and black-and-white nature of the Candidate Image. Crucially, the Key Text Description for *Leptodeira annulata*'s dorsal pattern specifies ""occipital region light brown with medial wide line"". While the Candidate Image displays a prominent light band immediately posterior to the head (consistent with ""occipital region light brown""), it lacks any discernible ""medial wide line"" within this light band. The band appears uniformly light, failing to match this specific diagnostic feature.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2435.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The Candidate Image does not match the described and depicted occipital pattern of *Leptodeira annulata*. The Key Text Description specifies ""occipital region light brown with medial wide line."" The Reference Images (C, E) clearly show a lighter (brownish) background on the top of the head and nape, with a distinct, often darker, medial line or stripe. In contrast, the Candidate Image displays a prominent, wide, dark, arrowhead-like pattern originating from the top of the head and extending broadly onto the nape, dominating the occipital region rather than being a medial line on a lighter background.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2496.jpg,"**NO MATCH**
+
+**Explanation:**
+
+The candidate image shows a prominent, dark, U-shaped or V-shaped marking on the occipital region (back of the head/neck). This directly contradicts the key text description for *Leptodeira annulata*, which states ""occipital region light brown with medial wide line,"" indicating a lighter medial area. The reference images (C, E) also show a generally light occipital region with a lighter medial patch, not a dark U/V-shaped marking. While the body pattern of dark blotches on a lighter background is broadly consistent with *Leptodeira annulata*, the specific occipital marking is a clear non-match.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2570.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+The candidate image does not match *Leptodeira annulata*. The defining characteristic for the head pattern of *Leptodeira annulata*, as described by the ""Key Text Description"" and clearly visible in the ""Reference Image"" (C, E), is an ""occipital region light brown with medial wide line"". In contrast, the candidate image displays a dorsal head that is almost entirely dark or black, lacking the light brown ground color and the specific medial dark line pattern on the occipital region. While the body shows a banded pattern consistent with the genus, the distinct dorsal head pattern is a critical non-matching feature.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2633.jpg,"VERDICT: **MATCH**
+
+**Justification:**
+
+Despite the highly stylized nature of the Candidate Image, several key features align with *Leptodeira annulata*:
+
+*   **Head Morphology:** The general shape of the head, relatively distinct from the neck, is consistent with the Reference Image.
+*   **Head Pattern:** The Candidate Image shows a lighter, unpatterned area on top of the head, which aligns with the ""occipital region light brown"" description from the Key Text and the lighter dorsal head coloration visible in Reference Images C and E.
+*   **Nuchal Collar:** A very prominent, wide, dark nuchal collar is distinctly visible immediately behind the head in the Candidate Image, which is a hallmark feature consistently present in all views of the *Leptodeira annulata* heads in the Reference Image (C, D, E, F).
+*   **Body Pattern:** While not explicitly described in the Key Text, the banded body pattern immediately following the nuchal collar in the Candidate Image is characteristic of *Leptodeira annulata*, the ""Banded Cat-eyed Snake.""",
+L. ornata_reference.PNG,L. ashmeadii,TAS_2751.jpg,"**Verdict:** NO MATCH
+
+**Justification:** The candidate image does not match *Leptodeira annulata* based on the provided reference materials. The key distinguishing feature is the pattern of the occipital region. The reference image (C, E) and the key text description explicitly state ""occipital region light brown"". In contrast, the candidate image clearly shows a predominantly dark occipital region and the posterior part of the head, directly contradicting this characteristic. Additionally, the head morphology in the candidate image appears more elongated and less broad/triangular compared to the distinct head shape of *Leptodeira annulata* in the reference image.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2753.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+
+*   **Body Pattern (Match):** The candidate image displays a clear annulated (ringed) body pattern with prominent alternating dark and light bands, including a distinct, broad dark nuchal collar immediately behind the head. This banding pattern is highly characteristic of *Leptodeira annulata* and is consistent with the general appearance and partial body views in the reference materials.
+*   **Head Pattern (No Match):** The Key Text Description explicitly states ""occipital region light brown with medial wide line"". In the provided reference images (C and E), the occipital region (the top rear part of the head) is clearly a lighter brown, featuring a darker medial marking. However, in the Candidate Image, the dorsal occipital region of the head appears predominantly dark in the black and white rendering, rather than a lighter base color with a medial dark line. This direct contradiction of the specified head pattern feature indicates that the candidate image does not fully match the diagnostic criteria for *Leptodeira annulata*.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2755.jpg,"**NO MATCH**
+
+**Justification:**
+The candidate image does not match *Leptodeira annulata* based on the key features.
+
+1.  **Head Pattern (Mismatch):** The Key Text Description specifies ""occipital region light brown with medial wide line"" for *Leptodeira annulata*. The Reference Image (C, D, E, F) consistently shows a head that is generally light brown/tan, with some individuals exhibiting a discernible darker medial line on the occiput. In contrast, the Candidate Image displays a head, particularly the occipital region, that is predominantly white with irregular, heavy black mottling and blotching, which does not align with a ""light brown with medial wide line.""
+2.  **Body Pattern (Ambiguous due to stylization):** While the candidate image shows a banded body pattern, consistent with the ""annulata"" (annulated/ringed) nature of the species, the heavily stylized black and white rendering makes a detailed comparison of band characteristics (e.g., shape, regularity, relative width, background color) difficult. However, the stark black and white, coarsely textured bands in the candidate image do not strongly resemble the smoother-edged, often less contrasting dark bands on a tan/brown background typically seen in *Leptodeira annulata*. The strong head pattern mismatch is the primary determinant.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2756.jpg,"**Verdict:** MATCH
+
+**Explanation:** The candidate image displays a head morphology consistent with *Leptodeira annulata*, featuring a distinct head shape with relatively large eyes. Crucially, the dorsal pattern on the occipital region and neck strongly matches the key text description for *Leptodeira annulata*: a light (white in the drawing) occipital region with a prominent, wide, dark (black in the drawing) medial line extending down the neck. This specific pattern is a diagnostic feature observed in both the reference image (implicitly) and explicitly described by the text.",True
+L. ornata_reference.PNG,L. ashmeadii,TAS_2758.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The candidate image does not match *Leptodeira annulata* based on several key features:
+
+1.  **Head Morphology and Eyes:** The candidate snake has a narrow head that is not distinctly set off from the neck, and its eyes appear very small and indistinct. In contrast, the *Leptodeira annulata* in the reference image (C, D, E, F) possesses a broader head that is more distinct from the neck, and notably large, prominent eyes with what appear to be vertical pupils.
+2.  **Head Pattern:** The candidate's head and occipital region are largely dark and highly mottled, lacking the ""light brown with medial wide line"" pattern described in the key text and visible on the occipital region of the reference *Leptodeira annulata* (e.g., in views C and E, there is a clearer, lighter brown patch often with a darker median marking).
+3.  **Anterior Body Pattern:** The candidate's anterior body shows a highly irregular, speckled, and mottled pattern of dark and light areas, which does not resemble the characteristic darker bands or blotches on a lighter background typically seen in *Leptodeira annulata*.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2769.jpg,"VERDICT: **NO MATCH**
+
+**Explanation:**
+
+The Candidate Image displays a prominent, wide, and continuous dark dorsal stripe running down the entire visible body, originating from the occipital region. This pattern is inconsistent with *Leptodeira annulata*. The Reference Images (C, D, E) of *L. annulata* show a generally light brown occipital region, and while the key text mentions a ""medial wide line"" there, this typically refers to a more subtle feature or a nuchal marking, not the strong, continuous dorsal stripe seen in the Candidate Image. *Leptodeira annulata* is typically characterized by distinct dark saddles or crossbands on a lighter background, not a dominant dorsal stripe.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2773.jpg,"**Verdict:** MATCH
+
+**Justification:** The candidate image displays a distinct head morphology consistent with *Leptodeira annulata*, featuring a broad head. Crucially, the occipital region of the candidate snake shows a prominent, wide, dark medial line, which directly matches the ""occipital region light brown with medial wide line"" description and is clearly visible in the reference images (e.g., Figures C and E). The general banded body pattern in the candidate image is also characteristic of the species.",True
+L. ornata_reference.PNG,L. ashmeadii,TAS_2774.jpg,"**VERDICT: NO MATCH**
+
+**Justification:**
+
+The Candidate Image does not match *Leptodeira annulata* primarily due to the pattern of the occipital region and neck.
+
+1.  **Occipital/Neck Pattern:**
+    *   **Reference Material (Image C, E, and Key Text):** *Leptodeira annulata* shows an occipital region (back of the head) that is light brown with a darker medial line or patch. A distinct dark collar or the first dark body band typically starts *behind* this lighter occipital area.
+    *   **Candidate Image:** The candidate clearly displays a very broad, solid, dark band covering the entire occipital region and extending onto the neck, immediately behind the head. This directly contradicts the description of a ""light brown with medial wide line"" occipital region and the visual evidence in the reference images.
+
+2.  **Head Morphology:** While stylized, the head in the Candidate Image appears less distinct from the neck and somewhat more pointed compared to the more rounded and distinct heads shown for *Leptodeira annulata* in the reference images.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2775.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+While the general head shape (distinct from neck) and the presence of body banding in the Candidate Image are broadly consistent with *Leptodeira annulata*, several key diagnostic features cannot be confirmed or are inconsistent:
+
+1.  **Eye Characteristics:** The Reference Image and typical descriptions of *Leptodeira annulata* show large eyes with vertical pupils. The stylized nature of the Candidate Image prevents verification of both the specific pupil shape and the exact size relative to the head.
+2.  **Dorsal Head Pattern (Occipital Region):** The Key Text Description specifies ""occipital region light brown with medial wide line."" While the Candidate Image depicts a generally lighter dorsal head area contrasting with a darker nuchal collar, the precise ""medial wide line"" or specific intricate patterning on the occipital region (as evident in Reference Image E) is not discernible due to the highly textured and indistinct nature of the drawing. This prevents confirmation of a critical diagnostic feature.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2776.jpg,"**Verdict:** NO MATCH
+
+**Explanation:**
+The head and nuchal pattern of the candidate snake does not match the characteristics of *Leptodeira annulata*. The reference images (C, E) and key text describe *L. annulata* as having an ""occipital region light brown with medial wide line."" In contrast, the candidate image displays a broad, solid, dark band covering the entire occipital/nuchal region, with no indication of a lighter background or a distinct medial line within it. Additionally, the head shape in the candidate appears more blunt and less distinct from the neck compared to the more triangular and defined head of *L. annulata* shown in the reference.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2777.jpg,"**Verdict:** NO MATCH
+
+**Explanation:** The Candidate Image is a highly stylized, black and white, heavily textured rendering that lacks the necessary detail for herpetological identification. Specific head morphology, individual scale patterns, eye characteristics, and coloration (including the ""occipital region light brown with medial wide line"" mentioned in the key text description) are completely absent and obscured by the artistic texture. Therefore, no meaningful comparison can be made with the diagnostic features of *Leptodeira annulata* shown in the Reference Image or described in the text.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2788.jpg,"**VERDICT:** MATCH
+
+**JUSTIFICATION:**
+The candidate image exhibits several key features consistent with *Leptodeira annulata*:
+1.  **Head Morphology:** The head is broad and distinctly set off from the neck, matching the general head shape seen in the reference images (C, D, E, F).
+2.  **Occipital Pattern:** A prominent dark, somewhat V-shaped or inverted U-shaped marking is visible on the occipital region of the head, which is a characteristic feature observed in the reference images (C, E) for *Leptodeira annulata*.
+3.  **Nuchal Band:** Immediately posterior to the head, a distinct dark nuchal (neck) band is present, consistent with the pattern seen in the reference images.
+4.  **Dorsal Body Pattern:** Following the nuchal band, the body shows a series of broad, somewhat interconnected dark blotches or bands along the dorsum on a lighter background. While the key text describes a ""medial wide line,"" this pattern of broad, often hourglass-shaped blotches that can appear somewhat continuous along the midline is characteristic of *Leptodeira annulata* and aligns with the visual pattern implied by the reference images. The candidate image's pattern, though in black and white, clearly represents this type of dorsal banding.",
+L. ornata_reference.PNG,L. ashmeadii,TAS_2794.jpg,"**NO MATCH**
+
+The candidate image is not a match for *Leptodeira annulata*.
+
+**Explanation:**
+
+*   **Head Morphology:** The candidate image shows a head that is conical and appears to blend smoothly into the body. This contrasts significantly with the distinct, somewhat triangular head shape of *Leptodeira annulata* visible in the reference image (C, E), which is clearly differentiated from the neck.
+*   **Dorsal Pattern (Occipital Region):** The reference images show *Leptodeira annulata* with a light brown/tan background on the occipital region, typically with a darker 'V' or arrowhead-shaped marking often containing a lighter central line. The key text explicitly describes the ""occipital region light brown with medial wide line."" The candidate image, however, displays a predominantly dark, mottled pattern over the head and neck, lacking the described light brown background in the occipital region and any discernible ""medial wide line"" in that context.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2860.jpg,"**Verdict:** NO MATCH
+
+**Explanation:** The Candidate Image is a highly abstract, stylized representation of a snake, lacking the necessary detail for species verification. It is impossible to compare specific head morphology, scale patterns, or eye characteristics (e.g., the vertical pupils characteristic of *Leptodeira annulata*) visible in the Reference Image. While the Candidate Image displays a generally banded body pattern, which is a feature of *Leptodeira annulata*, this pattern is too generalized and lacks the precise details, color, and specific markings (such as the ""occipital region light brown with medial wide line"") required to confirm it against the provided reference materials. The absence of specific diagnostic features renders a definitive match impossible.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2988.jpg,"**Verdict:** NO MATCH
+
+**Justification:**
+1.  **Head Features:** The Reference Images (C, D, E, F) highlight key diagnostic features of the head, including its morphology, scale patterns, and eye characteristics. The Candidate Image **does not show the head**, making it impossible to compare these crucial features with *Leptodeira annulata*.
+2.  **Body Pattern (Key Text Description):** The Key Text describes the dorsal pattern as ""occipital region light brown with medial wide line."" The Candidate Image **does not show the occipital region**, preventing verification of its color. While the candidate image displays a banded body pattern, which can be found in *Leptodeira annulata*, the specific ""medial wide line"" feature mentioned for the anterior body cannot be confirmed without the occipital region.
+
+Due to the absence of the head and associated diagnostic features in the Candidate Image, and the inability to fully verify the specific anterior body pattern described, a positive identification as *Leptodeira annulata* cannot be made.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_2993.jpg,"**VERDICT:** NO MATCH
+
+**Explanation:**
+The candidate image does not match *Leptodeira annulata*. While both images show banded patterns, the key distinguishing feature lies in the occipital and nape region. The key text describes *Leptodeira annulata* as having an ""occipital region light brown with medial wide line"". In contrast, the candidate image displays a very broad, solid dark band immediately behind the head, covering the entire occipital region and extending down the nape. This pattern significantly deviates from the described light occipital region with a medial dark line characteristic of *Leptodeira annulata* as shown and described in the reference materials. Furthermore, the head shape in the candidate image appears less distinct from the neck, and the head scales appear more textured compared to the smooth, well-defined head of *Leptodeira annulata* in the reference image.",False
+L. ornata_reference.PNG,L. ashmeadii,TAS_3184.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The candidate image does not match *Leptodeira annulata* based on several key morphological features:
+
+1.  **Head Morphology and Scale Texture:** The reference images (C, D, E, F) of *Leptodeira annulata* show a relatively broad head with smooth, unkeeled scales. In contrast, the candidate image displays an elongated, narrow head and, most notably, extremely rugose or highly keeled scales on both the head and visible neck region, giving it a rough, almost spiny appearance. This texture is fundamentally different from the smooth scaling of *Leptodeira annulata*.
+2.  **Dorsal Pattern (Occipital Region):** The key text description specifies ""occipital region light brown with medial wide line"" for *Leptodeira annulata*, which is clearly visible in the reference image C. The candidate image, however, shows a uniformly dark and highly textured occipital region with no discernible light area or medial wide line.",False
+L. ornata_reference.PNG,L. ornata,ICN-1375.png,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image does not depict a recognizable animal, let alone a snake. It lacks clear head morphology, symmetrical head scales, discernible eyes, or any identifiable dorsal pattern. The image is highly abstract and fragmented, showing no features that match the head morphology, scale patterns, eye characteristics, or the specific ""occipital region light brown with medial wide line"" described and visible in the *Leptodeira annulata* Reference Image.",False
+L. ornata_reference.PNG,L. ornata,ICN_0440.png,"**Verdict: NO MATCH**
+
+**Explanation:**
+The Candidate Image, which displays a dorsal body pattern, does not match the characteristics of *Leptodeira annulata*. Due to the lack of visible head features in the Candidate Image, direct comparison of head morphology, scale patterns, eye characteristics, or the specific occipital region pattern (""light brown with medial wide line"") mentioned in the reference materials is not possible.
+
+However, the visible body pattern in the Candidate Image shows a highly irregular, mottled, and blotchy arrangement of wide, often confluent dark patches interspersed with irregular light areas. This strongly contrasts with the characteristic dorsal pattern of *Leptodeira annulata*, which typically exhibits distinct, relatively regular dark bands on a lighter background, as partially evidenced by the body leading from the head in the provided Reference Image (C, E). The irregular and heavily blotched pattern in the Candidate Image is not consistent with the banded pattern of *Leptodeira annulata*.",False
+L. ornata_reference.PNG,L. ornata,ICN_10054.jpg,"**VERDICT:** NO MATCH
+
+**Explanation:**
+The Candidate Image is a highly stylized, black and white illustration, not a photograph of a live specimen. It lacks the essential morphological detail (such as individual scales, eye characteristics, specific head coloration, or discernible dorsal patterns) required to compare against the Reference Image or verify the Key Text Description. Therefore, it is impossible to confirm the characteristic head morphology, scale patterns, eye features, or the specific ""light brown occipital region with medial wide line"" for *Leptodeira annulata*.",False
+L. ornata_reference.PNG,L. ornata,ICN_10836.jpg,"**NO MATCH**
+
+The Candidate Image is a highly processed, black and white pattern devoid of crucial morphological details. It lacks any discernible head features, such as eye shape, scale arrangement, or specific head coloration, which are clearly visible and diagnostic in the Reference Image of *Leptodeira annulata*. Therefore, a direct comparison of head characteristics is impossible. The body pattern in the Candidate Image, while showing dark blotches, is too abstract and does not allow for verification against the specific ""occipital region light brown with medial wide line"" description.",False
+L. ornata_reference.PNG,L. ornata,ICN_10842.jpg,"**Verdict:** MATCH
+
+**Explanation:**
+The Candidate Image displays a dorsal body pattern characterized by broad, distinct dark bands or blotches on a lighter background. While the head is not visible in the Candidate Image, preventing direct comparison with the Reference Image's head morphology, scale patterns, or eye characteristics, and the Key Text specifically describes the ""occipital region light brown with medial wide line"" (a head/neck feature), the overall banded dorsal pattern shown in the Candidate Image is highly consistent with the known characteristics of *Leptodeira annulata*. This species is commonly known as the ""annulated snake"" due to its characteristic banding, which is clearly depicted in the Candidate Image.",
+L. ornata_reference.PNG,L. ornata,ICN_10875.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:**
+The occipital region of the head in the Candidate Image is uniformly dark, which directly contradicts the key text description of *Leptodeira annulata* (""occipital region light brown with medial wide line"") and the visual evidence in the reference images (C, E) which show a lighter brown occipital area with darker markings. While the general head shape might be somewhat similar, the specific head patterning, particularly on the occiput, is a clear non-match. The stylized nature of the Candidate Image also prevents detailed comparison of scale patterns or eye characteristics.",False
+L. ornata_reference.PNG,L. ornata,ICN_2570.png,"**VERDICT:** MATCH
+
+**JUSTIFICATION:**
+The Candidate Image exhibits a head morphology and a distinctive pattern on the occipital region that is consistent with *Leptodeira annulata*. The occipital region prominently displays a wide, dark, medial marking, which aligns perfectly with the Key Text Description ""occipital region light brown with medial wide line"" and is visually corroborated by the medial darker line/patch seen on the reference images (C and E). General head shape and eye placement are also consistent, despite the stylized nature and black and white rendering of the candidate image.",
+L. ornata_reference.PNG,L. ornata,ICN_6192.jpg,"**VERDICT:** NO MATCH
+
+**JUSTIFICATION:** The Candidate Image is a highly stylized, abstract, black-and-white representation that lacks the necessary anatomical detail for species verification. It is impossible to discern any specific head morphology, scale patterns, eye characteristics, or color patterns (such as a ""light brown occipital region with a medial wide line"") that are present and critical for identifying *Leptodeira annulata* as shown in the Reference Image and described in the Key Text. The image does not depict a recognizable snake, let alone the target species.",False
+L. ornata_reference.PNG,L. ornata,TAS_2699.jpg,"**VERDICT:** NO MATCH
+
+**Justification:**
+The candidate image does not match *Leptodeira annulata* based on the provided reference materials.
+
+**Head Features:**
+*   **Head Shape and Eyes:** The target species (*Leptodeira annulata*, as seen in the Reference Image) has a relatively broad head that is distinct from the neck, and large, prominent eyes. The Candidate Image shows a narrower, more elongated head that is less distinct from the neck, and the eyes appear smaller and less prominent.
+*   **Dorsal Head Pattern:** The Reference Image and Key Text describe an ""occipital region light brown with medial wide line"" (referring to a central darker marking or collar within the lighter occiput). In contrast, the Candidate Image displays a heavily mottled and largely dark head, especially on the occipital region and nape, with high-contrast black and white/light grey patterns. There is no clear light brown background in the occipital region, nor is there a discernible ""medial wide line"" as described for *Leptodeira annulata*. The overall dorsal head and neck pattern in the candidate is strikingly different, lacking the characteristic brown tones and specific markings of the target species.",False

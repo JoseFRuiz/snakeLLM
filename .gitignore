@@ -35,7 +35,7 @@ wheels/
 .venv
 
 # Secrets and API keys
-secrets.py
+api_keys.py
 config_local.py
 
 # IDE
