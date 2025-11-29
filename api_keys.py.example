@@ -1,5 +1,5 @@
-# Copy this file to secrets.py and add your actual API key
-# secrets.py is gitignored and will not be committed to the repository
+# Copy this file to api_keys.py and add your actual API key
+# api_keys.py is gitignored and will not be committed to the repository
 
 GEMINI_API_KEY = "your_api_key_here"
 
