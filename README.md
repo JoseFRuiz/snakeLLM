@@ -1,6 +1,6 @@
 # snakeLLM
 
-A Python application for snake species identification using Google's Gemini AI model.
+A Python application for snake species identification using Anthropic's Claude AI model.
 
 ## Prerequisites
 
@@ -97,7 +97,7 @@ pip install -r requirements.txt
 
 ### 4. Set Up API Key
 
-Create a `api_keys.py` file with your Google Gemini API key:
+Create a `api_keys.py` file with your Anthropic API key (get one at [platform.claude.com](https://platform.claude.com)):
 
 1. Copy the example file:
    ```bash
@@ -106,21 +106,35 @@ Create a `api_keys.py` file with your Google Gemini API key:
 
 2. Edit `api_keys.py` and replace `your_api_key_here` with your actual API key:
    ```python
-   GEMINI_API_KEY = "your_actual_api_key_here"
+   ANTHROPIC_API_KEY = "your_actual_api_key_here"
    ```
 
 **Note:** The `api_keys.py` file is gitignored and will not be committed to the repository, keeping your API key secure.
 
 **Alternative:** You can also set the API key as an environment variable if you prefer:
-- **Windows (PowerShell):** `$env:GEMINI_API_KEY="YOUR_API_KEY"`
-- **Windows (Command Prompt):** `set GEMINI_API_KEY=YOUR_API_KEY`
-- **macOS/Linux:** `export GEMINI_API_KEY="YOUR_API_KEY"`
+- **Windows (PowerShell):** `$env:ANTHROPIC_API_KEY="YOUR_API_KEY"`
+- **Windows (Command Prompt):** `set ANTHROPIC_API_KEY=YOUR_API_KEY`
+- **macOS/Linux:** `export ANTHROPIC_API_KEY="YOUR_API_KEY"`
 
 ### 5. Run the Script
 
 ```bash
+# Default model (claude-opus-5-5), sent through the Message Batches API
 python matching.py
+
+# Or choose a model
+python matching.py --model claude-sonnet-5-5
+python matching.py --model claude-haiku-5-5
+
+# Send requests one at a time instead of as a batch
+python matching.py --model claude-haiku-5-5 --mode direct
 ```
+
+**Modes:**
+- `batch` (default): all requests are submitted at once through the Message Batches API, which costs 50% less. Results usually arrive within an hour (at most 24 hours). The batch ID is saved to `batch_<model>.json`, so you can stop the script with Ctrl+C and run it again later to collect the results.
+- `direct`: requests are sent one at a time, with results saved after each one.
+
+Results are saved per model to `results_<model>.csv` (e.g. `results_claude-sonnet-5-5.csv`), so runs can be compared across models. Each row records the `model`, the `mode`, the token usage (`input_tokens`, `output_tokens`, where output includes thinking tokens) and an estimated `cost_usd` based on list prices.
 
 ## Usage
 
