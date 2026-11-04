@@ -4,7 +4,7 @@ A Python application for snake species identification using Anthropic's Claude A
 
 ## Prerequisites
 
-- **Python 3.11 recommended** (Python 3.9-3.11 compatible with numpy 1.26.0 and pandas 2.1.0)
+- **Python 3.11 recommended** (Python 3.10-3.11 supported: `anthropic` and `pillow-heif` need 3.10+, and pandas 2.1.0 works best up to 3.11)
   - **Note:** Python 3.12+ may have compatibility issues with pandas 2.1.0 (build errors during installation)
   - Python 3.11 is the recommended version for this project
   - Download Python 3.11 from [python.org](https://www.python.org/downloads/release/python-3110/)
@@ -37,15 +37,15 @@ Get-Command python | Select-Object -ExpandProperty Source
 python3 --version
 ```
 
-**If you only have Python 3.8 or lower, or if you have Python 3.12+:**
+**If you only have Python 3.9 or lower, or if you have Python 3.12+:**
 - **Recommended:** Download and install Python 3.11 from [python.org](https://www.python.org/downloads/release/python-3110/)
-- Python 3.11 is compatible with all packages in this project (pandas 2.1.0 works best with Python 3.9-3.11)
+- Python 3.11 is compatible with all packages in this project (pandas 2.1.0 works best with Python 3.10-3.11)
 - During installation on Windows, make sure to check "Add Python to PATH"
 - After installation, restart your terminal/PowerShell
 
 ### 2. Create a Virtual Environment
 
-**Important:** Use Python 3.11 (or Python 3.9-3.10) for best compatibility with pandas 2.1.0. Python 3.12+ may cause build errors.
+**Important:** Use Python 3.11 (or Python 3.10) for best compatibility with pandas 2.1.0. Python 3.12+ may cause build errors.
 
 **Windows:**
 ```powershell
@@ -76,9 +76,8 @@ python3.11 -m venv venv
 # Or if 3.11 is your default:
 python3 -m venv venv
 
-# Other compatible versions:
+# Other compatible version:
 python3.10 -m venv venv
-python3.9 -m venv venv
 
 # Activate the virtual environment
 source venv/bin/activate
@@ -131,15 +130,27 @@ python matching.py --model claude-haiku-5-5 --mode direct
 ```
 
 **Modes:**
-- `batch` (default): all requests are submitted at once through the Message Batches API, which costs 50% less. Results usually arrive within an hour (at most 24 hours). The batch ID is saved to `batch_<model>.json`, so you can stop the script with Ctrl+C and run it again later to collect the results.
+- `batch` (default): requests are submitted through the Message Batches API, which costs 50% less. Because the photos are large, they are split into several batches of about 25 MB each. Results usually arrive within an hour (at most 24 hours). The batch IDs are saved to `batch_<model>_es.json`, so you can stop the script with Ctrl+C and run it again later to collect the results.
 - `direct`: requests are sent one at a time, with results saved after each one.
 
-Results are saved per model to `results_<model>.csv` (e.g. `results_claude-sonnet-5-5.csv`), so runs can be compared across models. Each row records the `model`, the `mode`, the token usage (`input_tokens`, `output_tokens`, where output includes thinking tokens) and an estimated `cost_usd` based on list prices.
+The prompt and the diagnostic descriptions (from `data/Diagnósis Duellaman, Costa & Gunter.docx`, all authors combined per species) are in Spanish, and Claude answers in Spanish with `VEREDICTO: COINCIDE` or `VEREDICTO: NO COINCIDE`. Test images can be JPG, PNG or HEIC.
+
+Results are saved per model to `results_<model>_es.csv` (e.g. `results_claude-sonnet-5-5_es.csv`, UTF-8 so Excel shows accents correctly), so runs can be compared across models. Each row records the `model`, the `mode`, the token usage (`input_tokens`, `output_tokens`, where output includes thinking tokens) and an estimated `cost_usd` based on list prices.
 
 ## Usage
 
-The script compares a candidate snake image against a reference image and text description to identify if it matches the species *Leptodeira annulata*.
+The script checks every test photo against every species: for each of the four *Leptodeira* species (*L. annulata*, *L. approximans*, *L. ashmeadii*, *L. ornata*) it compares each candidate photo with that species' reference image and diagnostic descriptions, and records whether Claude judges it a match.
 
-Make sure you have:
-- Reference image in `data/reference/L. annulata_referencia.PNG`
-- Test image in `data/test/ICN_265.jpg`
+Expected data layout:
+- Reference images: `data/reference/<species>_reference.PNG`, e.g. `data/reference/L. annulata_reference.PNG`
+- Test photos, one folder per species: `data/test/<species>/`, e.g. `data/test/L. ornata/`. The folder name is the photo's true species, so the results can be scored later.
+
+### Quick test before a full run
+
+Run the cheapest model one request at a time, and stop it with Ctrl+C after a few images:
+
+```bash
+python matching.py --model claude-haiku-5-5 --mode direct
+```
+
+Check `results_claude-haiku-5-5_es.csv` (Spanish answers, verdicts in `is_match`, token usage and cost). Before the real run, delete that file or choose "Start fresh" when the script asks.

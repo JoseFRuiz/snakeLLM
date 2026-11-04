@@ -8,7 +8,8 @@ import argparse
 import anthropic
 from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
 from anthropic.types.messages.batch_create_params import Request
-from PIL import Image
+from PIL import Image, ImageOps
+from pillow_heif import register_heif_opener
 import pandas as pd
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
@@ -26,6 +27,9 @@ except ImportError:
 
 client = anthropic.Anthropic()
 
+# Let Pillow open iPhone .HEIC photos
+register_heif_opener()
+
 # Choose the model and mode from the command line, e.g.
 #   python matching.py --model claude-sonnet-5-5
 #   python matching.py --model claude-haiku-5-5 --mode direct
@@ -39,8 +43,8 @@ args = parser.parse_args()
 
 MODEL = args.model
 MODE = args.mode
-RESULTS_CSV = f"results_{MODEL}.csv"  # one results file per model, for later comparison
-BATCH_STATE_FILE = f"batch_{MODEL}.json"  # tracks a submitted batch so an interrupted run can collect it later
+RESULTS_CSV = f"results_{MODEL}_es.csv"  # one results file per model (Spanish prompt), for later comparison
+BATCH_STATE_FILE = f"batch_{MODEL}_es.json"  # tracks a submitted batch so an interrupted run can collect it later
 
 # Standard prices in USD per 1M tokens (input, output); check current prices at claude.com/pricing.
 # Batch requests are billed at 50% of these. Models not listed get an empty cost_usd.
@@ -56,13 +60,18 @@ PRICES = {
     "claude-haiku-4-5": (1.00, 5.00),
 }
 BATCH_DISCOUNT = 0.5
+MAX_BATCH_MB = 25  # upload size of each batch; the photos make one batch for every request too large
 
 def image_to_block(image_path):
     """
     Loads an image, resizes it to Claude's recommended size, and returns it
     as a base64 image content block.
     """
-    image = Image.open(image_path).convert("RGB")
+    # Pillow detects the format from the file contents, not the extension
+    # (e.g. the .DNG files in data/test are really JPEGs)
+    image = Image.open(image_path)
+    # Phone photos store their rotation in EXIF; apply it so the snake isn't sideways
+    image = ImageOps.exif_transpose(image).convert("RGB")
 
     # Claude downscales images whose long edge exceeds ~1568px, so resize up front
     # to keep requests small and under the per-image size limit
@@ -81,40 +90,43 @@ def image_to_block(image_path):
         },
     }
 
-def build_request_params(reference_image_path, new_image_path, species_name, description):
+def build_request_params(reference_image_path, new_image_path, species_name, descriptions):
     """
     Builds the Claude request that compares a new image against a reference image
-    and a text description for species verification.
+    and the diagnostic descriptions of the species (one per author).
     Raises an exception if an image cannot be loaded.
     """
-    # 📝 Step 1: Craft the detailed, structured prompt
+    descriptions_text = "\n".join(f"    - {author}: {text}" for author, text in descriptions)
+
+    # 📝 Step 1: Craft the detailed, structured prompt (in Spanish)
     prompt = f"""
-    You are an expert herpetologist performing species verification.
+    Eres un herpetólogo experto que realiza la verificación de especies.
 
-    The target species is *{species_name}*.
+    La especie objetivo es *{species_name}*.
 
-    --- REFERENCE MATERIALS ---
+    --- MATERIALES DE REFERENCIA ---
 
-    1.  **Reference Image:** The first image provided shows the key head features of a confirmed *{species_name}*.
-    2.  **Key Text Description (Dorsal Pattern):** "{description}"
+    1.  **Imagen de referencia:** La primera imagen muestra los rasgos clave de la cabeza de un ejemplar confirmado de *{species_name}*.
+    2.  **Descripciones diagnósticas (patrón de coloración), por autor:**
+{descriptions_text}
 
-    --- TASK ---
+    --- TAREA ---
 
-    The second image provided is the **Candidate Image** for identification.
+    La segunda imagen es la **Imagen candidata** que se debe identificar.
 
-    1.  **Compare** the Candidate Image against the Reference Image (head morphology, scale patterns, eye characteristics) AND the Key Text Description (body pattern characteristics).
-    2.  **Determine** if the Candidate Image is a **MATCH** or **NO MATCH** for *{species_name}*.
-    3.  **Provide a concise explanation** detailing the matching and non-matching features you observed in both the head and body (if visible).
+    1.  **Compara** la imagen candidata con la imagen de referencia (morfología de la cabeza, patrón de escamas, características de los ojos) Y con las descripciones diagnósticas (patrón de la cabeza y del cuerpo).
+    2.  **Determina** si la imagen candidata **COINCIDE** o **NO COINCIDE** con *{species_name}*.
+    3.  **Explica brevemente** los rasgos que coinciden y los que no coinciden, tanto en la cabeza como en el cuerpo (si es visible), indicando en qué descripción se basa cada observación.
 
-    Start your response with a first line that is exactly "VERDICT: MATCH" or "VERDICT: NO MATCH",
-    followed by a brief justification.
+    Responde en español. La primera línea de tu respuesta debe ser exactamente "VEREDICTO: COINCIDE" o "VEREDICTO: NO COINCIDE",
+    seguida de una breve justificación.
     """
 
     # 🔗 Step 2: Combine the prompt and images into one request
     content = [
-        {"type": "text", "text": "Reference Image:"},
+        {"type": "text", "text": "Imagen de referencia:"},
         image_to_block(reference_image_path),
-        {"type": "text", "text": "Candidate Image:"},
+        {"type": "text", "text": "Imagen candidata:"},
         image_to_block(new_image_path),
         {"type": "text", "text": prompt}
     ]
@@ -154,15 +166,15 @@ def estimate_cost(input_tokens, output_tokens, batch):
 
 def parse_match_result(result_text):
     """
-    Parses the API response text to determine if it's a MATCH or NO MATCH.
+    Parses the API response text to determine if it's a match (COINCIDE) or not (NO COINCIDE).
     Returns True for match, False for no match, None if unclear.
     """
     if not result_text or "Error:" in result_text:
         return None
 
-    verdict = re.search(r"VERDICT:\s*(NO MATCH|MATCH)", result_text, re.IGNORECASE)
+    verdict = re.search(r"VEREDICTO:\s*(NO COINCIDE|COINCIDE)", result_text, re.IGNORECASE)
     if verdict:
-        return verdict.group(1).upper() == "MATCH"
+        return verdict.group(1).upper() == "COINCIDE"
 
     # If we can't determine, return None
     return None
@@ -170,7 +182,7 @@ def parse_match_result(result_text):
 def make_result_row(reference_file, species, file_name, message, batch):
     """Builds one results.csv row from a Claude response, including its token usage and cost."""
     if message.stop_reason == "refusal":
-        result_text = "Error: Claude declined to answer this request"
+        result_text = "Error: Claude se negó a responder esta solicitud"
     else:
         result_text = "".join(block.text for block in message.content if block.type == "text")
 
@@ -193,7 +205,7 @@ def load_existing_results(csv_path=RESULTS_CSV):
     """Load existing results from CSV file if it exists."""
     if os.path.exists(csv_path):
         try:
-            df = pd.read_csv(csv_path)
+            df = pd.read_csv(csv_path, encoding="utf-8-sig")
             # Create a set of tuples (reference, species, query_image) for quick lookup
             existing_results = set()
             for _, row in df.iterrows():
@@ -206,109 +218,174 @@ def load_existing_results(csv_path=RESULTS_CSV):
 
 def save_results(result_list):
     """Save all results collected so far."""
-    pd.DataFrame(result_list).to_csv(RESULTS_CSV, index=False)
+    # utf-8-sig so Excel shows accented characters (ó, á, ñ) correctly
+    pd.DataFrame(result_list).to_csv(RESULTS_CSV, index=False, encoding="utf-8-sig")
 
 def is_already_processed(reference_file, species, query_image, existing_results):
     """Check if a combination has already been processed."""
     return (reference_file, species, query_image) in existing_results
 
-def submit_batch(pending):
+def save_batch_state(batches):
+    """Saves the submitted batches that still have to be collected (deletes the file when none are left)."""
+    if batches:
+        with open(BATCH_STATE_FILE, "w") as f:
+            json.dump({"batches": batches}, f, indent=2)
+    elif os.path.exists(BATCH_STATE_FILE):
+        os.remove(BATCH_STATE_FILE)
+
+def submit_batches(pending):
     """
-    Submits all pending combinations as one Message Batch and saves the batch ID,
-    so the results can still be collected if the script is interrupted.
-    Returns (batch state, number of images that could not be loaded).
+    Submits all pending combinations as Message Batches. The images make the requests large,
+    so they are split into batches of about MAX_BATCH_MB each; one huge upload fails.
+    Each batch ID is saved as soon as it is created, so the results can still be
+    collected if the script is interrupted.
+    Returns (list of submitted batches, number of combinations whose images could not be loaded).
     """
-    requests = []
-    request_map = {}
+    batches = []
     load_errors = 0
+    requests, request_map, chunk_bytes = [], {}, 0
+
+    def submit_chunk():
+        print(f"\n📤 Submitting batch {len(batches) + 1} with {len(requests)} requests (~{chunk_bytes / 1024 / 1024:.0f} MB)...")
+        batch = client.messages.batches.create(requests=requests)
+        batches.append({"batch_id": batch.id, "requests": request_map})
+        save_batch_state(batches)
+        print(f"   Batch ID: {batch.id} (saved to {BATCH_STATE_FILE})")
+
     for i, (reference, species, file_name) in enumerate(pending):
         reference_path = os.path.join("data", "reference", reference["file_name"])
         new_image_path = os.path.join("data", "test", species, file_name)
         try:
-            params = build_request_params(reference_path, new_image_path, reference["species_name"], reference["description"])
+            params = build_request_params(reference_path, new_image_path, reference["species_name"], reference["descriptions"])
         except Exception as e:
             load_errors += 1
             print(f"  ❌ Error loading images for {reference['file_name']} / {species} / {file_name}: {e}")
             continue
 
+        request_bytes = len(json.dumps(params))
+        if requests and chunk_bytes + request_bytes > MAX_BATCH_MB * 1024 * 1024:
+            submit_chunk()
+            requests, request_map, chunk_bytes = [], {}, 0
+
         # custom_id only allows letters, digits, - and _, so map it back to the combination
         custom_id = f"req-{i}"
         requests.append(Request(custom_id=custom_id, params=MessageCreateParamsNonStreaming(**params)))
         request_map[custom_id] = [reference["file_name"], species, file_name]
+        chunk_bytes += request_bytes
 
-    if not requests:
-        return None, load_errors
+    if requests:
+        submit_chunk()
 
-    print(f"\n📤 Submitting batch with {len(requests)} requests...")
-    batch = client.messages.batches.create(requests=requests)
-    state = {"batch_id": batch.id, "requests": request_map}
-    with open(BATCH_STATE_FILE, "w") as f:
-        json.dump(state, f, indent=2)
-    print(f"   Batch ID: {batch.id} (saved to {BATCH_STATE_FILE})")
-    return state, load_errors
+    return batches, load_errors
 
-def collect_batch(state, result_list, existing_results):
+def collect_batches(batches, result_list, existing_results):
     """
-    Waits for a submitted batch to finish and adds its results.
+    Waits for each submitted batch to finish and adds its results.
     Failed requests are not saved, so they are retried on the next run.
     Returns (number processed, number of errors).
     """
-    batch_id = state["batch_id"]
-    print(f"\n⏳ Waiting for batch {batch_id} to finish (usually within an hour).")
+    print(f"\n⏳ Waiting for {len(batches)} batch(es) to finish (usually within an hour).")
     print(f"   You can stop the script with Ctrl+C and run it again later to collect the results.")
-
-    while True:
-        batch = client.messages.batches.retrieve(batch_id)
-        if batch.processing_status == "ended":
-            break
-        counts = batch.request_counts
-        print(f"   Status: {batch.processing_status} - {counts.processing} processing, "
-              f"{counts.succeeded} succeeded, {counts.errored} errored")
-        time.sleep(30)
 
     processed_count = 0
     error_count = 0
-    # Results arrive in any order, so look each one up by its custom_id
-    for item in client.messages.batches.results(batch_id):
-        reference_file, species, file_name = state["requests"][item.custom_id]
-        if item.result.type == "succeeded":
-            row = make_result_row(reference_file, species, file_name, item.result.message, batch=True)
-            if row["result_text"].startswith("Error:"):
-                error_count += 1
-                print(f"  ❌ {reference_file} / {species} / {file_name}: {row['result_text']}")
-            result_list.append(row)
-            existing_results.add((reference_file, species, file_name))
-            processed_count += 1
-        else:
-            error_count += 1
-            print(f"  ❌ {reference_file} / {species} / {file_name}: {item.result.type} (will be retried on the next run)")
+    while batches:
+        state = batches[0]
+        batch_id = state["batch_id"]
 
-    save_results(result_list)
-    os.remove(BATCH_STATE_FILE)
-    print(f"   ✓ Batch results saved to {RESULTS_CSV}")
+        while True:
+            batch = client.messages.batches.retrieve(batch_id)
+            if batch.processing_status == "ended":
+                break
+            counts = batch.request_counts
+            print(f"   Batch {batch_id}: {batch.processing_status} - {counts.processing} processing, "
+                  f"{counts.succeeded} succeeded, {counts.errored} errored")
+            time.sleep(30)
+
+        # Results arrive in any order, so look each one up by its custom_id
+        for item in client.messages.batches.results(batch_id):
+            reference_file, species, file_name = state["requests"][item.custom_id]
+            if item.result.type == "succeeded":
+                row = make_result_row(reference_file, species, file_name, item.result.message, batch=True)
+                if row["result_text"].startswith("Error:"):
+                    error_count += 1
+                    print(f"  ❌ {reference_file} / {species} / {file_name}: {row['result_text']}")
+                result_list.append(row)
+                existing_results.add((reference_file, species, file_name))
+                processed_count += 1
+            else:
+                error_count += 1
+                print(f"  ❌ {reference_file} / {species} / {file_name}: {item.result.type} (will be retried on the next run)")
+
+        # Save the results before forgetting the batch, so nothing is lost or collected twice
+        save_results(result_list)
+        batches.pop(0)
+        save_batch_state(batches)
+        print(f"   ✓ Results of batch {batch_id} saved to {RESULTS_CSV}")
+
     return processed_count, error_count
 
 # --- Execution ---
-# Your previous L. annulata description
+# Diagnostic descriptions per species and author, from data/Diagnósis Duellaman, Costa & Gunter.docx
 leptodeira_annulata = {
     "file_name": "L. annulata_reference.PNG",
     "species_name": "Leptodeira annulata",
-    "description": "First dorsal blotch with half-moon shape generally fused with other dorsal blotches in the first third of body forming a zigzag pattern."
+    "descriptions": [
+        ("Duellman", "A veces, las manchas dorsales están interconectadas y forman una banda en zigzag a lo largo del dorso. "
+                     "En algunos individuos, esta banda en zigzag puede ser recta y estrecha, dando la apariencia de una franja "
+                     "dorsal media de color marrón oscuro. Las manchas laterales intercalares están ausentes o se presentan "
+                     "únicamente como bordes oscurecidos de las escamas en las hileras 1 a 3. El color de la parte superior de "
+                     "la cabeza varía de marrón claro a marrón grisáceo apagado. Por lo general carece de marcas, aunque a veces "
+                     "presenta una franja tenue a lo largo del borde lateral de cada escama parietal."),
+        ("Costa", "Región occipital de color marrón claro a marrón grisáceo, sin franjas; primera mancha dorsal en forma de "
+                  "media luna, generalmente fusionada con otras manchas dorsales en el primer tercio del cuerpo, formando un "
+                  "patrón en zigzag."),
+    ]
     }
 leptodeira_approximans = {
     "file_name": "L. approximans_reference.PNG",
     "species_name": "Leptodeira approximans",
-    "description": "first dorsal blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first third of body forming a zig-zag pattern"
+    "descriptions": [
+        ("Gunter", "Coloración pardusca, con una banda ondulada (en zigzag) de color marrón oscuro a lo largo del dorso. "
+                   "Cabeza de color marrón oscuro, con una franja poco definida que va desde el ojo hacia la comisura de la "
+                   "boca. Partes inferiores de color amarillento uniforme. A veces, el color de fondo es tan oscuro que la "
+                   "banda dorsal apenas se distingue."),
+        ("Costa", "Región occipital de color marrón claro a marrón grisáceo, sin franjas; primeras manchas dorsales del "
+                  "cuerpo en forma de media luna, generalmente fusionadas con otras manchas dorsales en el primer tercio del "
+                  "cuerpo, formando un patrón en zigzag."),
+    ]
     }
 leptodeira_ashmeadii = {
     "file_name": "L. ashmeadii_reference.PNG",
     "species_name": "Leptodeira ashmeadii",
-    "description": "two dark brown parallel stripes in the parietal region which run toward the occipitals; two occipital stripes extend to the body and fuse with the first dorsal blotch"
+    "descriptions": [
+        ("Duellman", "La primera mancha del cuerpo está dividida a lo largo de la línea media por una franja del color de "
+                     "fondo. En algunos individuos, la separación no es completa, de modo que el extremo posterior o el "
+                     "anterior de la mancha —o ambos— pueden estar en contacto. Esta mancha se extiende hacia adelante por la "
+                     "nuca hasta las escamas postparietales o el borde posterior de las parietales. La superficie dorsal de la "
+                     "cabeza es de color marrón claro, con manchas irregulares de color marrón oscuro en las escamas "
+                     "prefrontales, frontal y parietales. Estas manchas pueden ser pequeñas y dispersas, o bien más grandes y "
+                     "centradas en la parte media de cada escama. Puede haber una franja de color marrón oscuro a lo largo del "
+                     "borde lateral de la parietal que conecte con las manchas de la nuca en el borde posteromedial de dicha "
+                     "escama."),
+    ]
     }
 leptodeira_ornata = {
     "file_name": "L. ornata_reference.PNG",
     "species_name": "Leptodeira ornata",
-    "description": "occipital region light brown with medial wide line"
+    "descriptions": [
+        ("Duellman", "La parte superior de la cabeza es de color marrón grisáceo; a veces presenta manchas de color marrón "
+                     "oscuro dispersas en las escamas frontales y parietales. En algunos ejemplares existe una franja fina en "
+                     "la nuca —a menudo poco definida— que se extiende hacia atrás desde los bordes posteriores de las "
+                     "parietales, abarcando una longitud de tres a cinco escamas. En estas serpientes, por lo general, está "
+                     "presente la franja de la nuca, la cual puede estar conectada con la primera mancha del cuerpo. En algunos "
+                     "individuos se observa una expansión lateral de la franja de la nuca hacia la parte anterior, formando una "
+                     "marca en forma de T, cuyos brazos se extienden lateralmente sobre las escamas postparietales. Las manchas "
+                     "dorsales del cuerpo son cortas y equivalen en longitud a los espacios dorsales intermedios. Las serpientes "
+                     "de Chocó (Colombia) también presentan manchas corporales bastante cortas, pero suelen tener una franja "
+                     "nucal poco definida."),
+        ("Costa", "Región occipital de color marrón claro con una línea media ancha."),
+    ]
     }
 
 reference_list = [leptodeira_annulata, leptodeira_approximans, leptodeira_ashmeadii, leptodeira_ornata]
@@ -348,20 +425,21 @@ else:
 processed_count = 0
 error_count = 0
 
-# A batch submitted by an earlier, interrupted run: collect it, or discard it when starting fresh
+# Batches submitted by an earlier, interrupted run: collect them, or discard them when starting fresh
 if os.path.exists(BATCH_STATE_FILE):
     with open(BATCH_STATE_FILE) as f:
-        previous_state = json.load(f)
+        previous_batches = json.load(f)["batches"]
     if start_fresh:
-        print(f"\n🗑️  Discarding unfinished batch {previous_state['batch_id']} from a previous run...")
-        try:
-            client.messages.batches.cancel(previous_state["batch_id"])
-        except anthropic.APIStatusError:
-            pass  # the batch has already ended
-        os.remove(BATCH_STATE_FILE)
+        print(f"\n🗑️  Discarding {len(previous_batches)} unfinished batch(es) from a previous run...")
+        for previous in previous_batches:
+            try:
+                client.messages.batches.cancel(previous["batch_id"])
+            except anthropic.APIStatusError:
+                pass  # the batch has already ended
+        save_batch_state([])
     else:
-        print(f"\n📥 Found batch {previous_state['batch_id']} from a previous run - collecting its results first...")
-        batch_processed, batch_errors = collect_batch(previous_state, result_list, existing_results)
+        print(f"\n📥 Found {len(previous_batches)} batch(es) from a previous run - collecting their results first...")
+        batch_processed, batch_errors = collect_batches(previous_batches, result_list, existing_results)
         processed_count += batch_processed
         error_count += batch_errors
 
@@ -382,10 +460,10 @@ for reference in reference_list:
 print(f"\n{len(pending)} of {total_combinations} combinations to process ({skipped_count} already done).")
 
 if pending and MODE == "batch":
-    state, load_errors = submit_batch(pending)
+    batches, load_errors = submit_batches(pending)
     error_count += load_errors
-    if state:
-        batch_processed, batch_errors = collect_batch(state, result_list, existing_results)
+    if batches:
+        batch_processed, batch_errors = collect_batches(batches, result_list, existing_results)
         processed_count += batch_processed
         error_count += batch_errors
 
@@ -396,7 +474,7 @@ elif pending and MODE == "direct":
         print(f"\n🔄 Processing [{position}/{len(pending)}]: {reference['file_name']} / {species} / {file_name}")
 
         try:
-            params = build_request_params(REFERENCE_IMAGE_PATH, NEW_IMAGE_PATH, reference["species_name"], reference["description"])
+            params = build_request_params(REFERENCE_IMAGE_PATH, NEW_IMAGE_PATH, reference["species_name"], reference["descriptions"])
             message = send_direct_request(params)
             row = make_result_row(reference["file_name"], species, file_name, message, batch=False)
 
