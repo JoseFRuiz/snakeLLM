@@ -130,12 +130,16 @@ python matching.py --model claude-haiku-5-5 --mode direct
 ```
 
 **Modes:**
-- `batch` (default): requests are submitted through the Message Batches API, which costs 50% less. Because the photos are large, they are split into several batches of about 25 MB each. Results usually arrive within an hour (at most 24 hours). The batch IDs are saved to `batch_<model>_es.json`, so you can stop the script with Ctrl+C and run it again later to collect the results.
+- `batch` (default): requests are submitted through the Message Batches API, which costs 50% less. Because the photos are large, they are split into several batches of about 25 MB each. Results usually arrive within an hour (at most 24 hours). The batch IDs are saved to `batch_<model>_<prompt version>.json`, so you can stop the script with Ctrl+C and run it again later to collect the results.
 - `direct`: requests are sent one at a time, with results saved after each one.
 
-The prompt and the diagnostic descriptions (from `data/Diagnósis Duellaman, Costa & Gunter.docx`, all authors combined per species) are in Spanish, and Claude answers in Spanish with `VEREDICTO: COINCIDE` or `VEREDICTO: NO COINCIDE`. Test images can be JPG, PNG or HEIC.
+The prompt and the diagnostic descriptions (from `data/Diagnósis Duellaman, Costa & Gunter.docx`, all authors combined per species) are in Spanish, and Claude answers in Spanish with `VEREDICTO: COINCIDE` or `VEREDICTO: NO COINCIDE`. The diagnosis gives priority to coloration and the shape of the blotches (including head coloration), and ignores the size and shape of the head, eyes and scales. Test images can be JPG, PNG or HEIC.
 
-Results are saved per model to `results_<model>_es.csv` (e.g. `results_claude-sonnet-5-5_es.csv`, UTF-8 so Excel shows accents correctly), so runs can be compared across models. Each row records the `model`, the `mode`, the token usage (`input_tokens`, `output_tokens`, where output includes thinking tokens) and an estimated `cost_usd` based on list prices.
+Results are saved per model and prompt version to `results_<model>_<prompt version>.csv` (e.g. `results_claude-sonnet-5-5_es_v2.csv`, UTF-8 so Excel shows accents correctly), so runs can be compared across models and prompt versions. The prompt version is set by `PROMPT_VERSION` in `matching.py`; change it whenever you change the prompt, so results from different prompts are never mixed. Prompt versions so far:
+- `es_v1` (files named `results_<model>_es.csv`): Spanish prompt, comparing head morphology, scales and eyes as well as coloration.
+- `es_v2`: diagnosis based on coloration and blotch shape; head, eye and scale size and shape are ignored.
+
+Each row records the `model`, the `prompt_version`, the `mode`, the token usage (`input_tokens`, `output_tokens`, where output includes thinking tokens) and an estimated `cost_usd` based on list prices.
 
 ## Usage
 
@@ -143,7 +147,7 @@ The script checks every test photo against every species: for each of the four *
 
 Expected data layout:
 - Reference images: `data/reference/<species>_reference.PNG`, e.g. `data/reference/L. annulata_reference.PNG`
-- Test photos, one folder per species: `data/test/<species>/`, e.g. `data/test/L. ornata/`. The folder name is the photo's true species, so the results can be scored later.
+- Test photos, one folder per species: `data/test/<species>/`, e.g. `data/test/L. ornata/`. The folder name is the photo's true species, so the results can be scored later. Every folder in `data/test` is processed, so photos of unknown species can go in `data/test/Sin identificar/`: they are compared with all four species as well, but they are left out when scoring accuracy.
 
 ### Quick test before a full run
 
@@ -153,4 +157,4 @@ Run the cheapest model one request at a time, and stop it with Ctrl+C after a fe
 python matching.py --model claude-haiku-5-5 --mode direct
 ```
 
-Check `results_claude-haiku-5-5_es.csv` (Spanish answers, verdicts in `is_match`, token usage and cost). Before the real run, delete that file or choose "Start fresh" when the script asks.
+Check `results_claude-haiku-5-5_es_v2.csv` (Spanish answers, verdicts in `is_match`, token usage and cost). Before the real run, delete that file or choose "Start fresh" when the script asks.

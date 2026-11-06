@@ -43,8 +43,11 @@ args = parser.parse_args()
 
 MODEL = args.model
 MODE = args.mode
-RESULTS_CSV = f"results_{MODEL}_es.csv"  # one results file per model (Spanish prompt), for later comparison
-BATCH_STATE_FILE = f"batch_{MODEL}_es.json"  # tracks a submitted batch so an interrupted run can collect it later
+# Change this whenever the prompt changes, so results from different prompt versions are never mixed.
+# es_v1: Spanish prompt; es_v2: diagnosis prioritizes coloration and blotch shape, ignores head/eye/scale size and shape
+PROMPT_VERSION = "es_v2"
+RESULTS_CSV = f"results_{MODEL}_{PROMPT_VERSION}.csv"  # one results file per model and prompt version, for later comparison
+BATCH_STATE_FILE = f"batch_{MODEL}_{PROMPT_VERSION}.json"  # tracks submitted batches so an interrupted run can collect them later
 
 # Standard prices in USD per 1M tokens (input, output); check current prices at claude.com/pricing.
 # Batch requests are billed at 50% of these. Models not listed get an empty cost_usd.
@@ -106,17 +109,23 @@ def build_request_params(reference_image_path, new_image_path, species_name, des
 
     --- MATERIALES DE REFERENCIA ---
 
-    1.  **Imagen de referencia:** La primera imagen muestra los rasgos clave de la cabeza de un ejemplar confirmado de *{species_name}*.
+    1.  **Imagen de referencia:** La primera imagen muestra la coloración y las manchas de la cabeza de un ejemplar confirmado de *{species_name}*.
     2.  **Descripciones diagnósticas (patrón de coloración), por autor:**
 {descriptions_text}
+
+    --- CRITERIOS DEL DIAGNÓSTICO ---
+
+    -   **Prioridad:** basa el diagnóstico principalmente en la **coloración** y en la **forma de las manchas**: color de fondo, presencia y trazado de franjas, y forma y disposición de las manchas dorsales (por ejemplo, manchas en media luna, fusionadas en zigzag o divididas por la línea media).
+    -   **Coloración de la cabeza:** sí tenla en cuenta (color de la parte superior de la cabeza, manchas, franjas y marcas en la cabeza y la nuca).
+    -   **No tengas en cuenta** el tamaño ni la forma de la cabeza, de los ojos ni de las escamas, aunque se vean diferentes de la imagen de referencia. Las escamas solo sirven como referencia para ubicar manchas o franjas (por ejemplo, "franja sobre las parietales").
 
     --- TAREA ---
 
     La segunda imagen es la **Imagen candidata** que se debe identificar.
 
-    1.  **Compara** la imagen candidata con la imagen de referencia (morfología de la cabeza, patrón de escamas, características de los ojos) Y con las descripciones diagnósticas (patrón de la cabeza y del cuerpo).
+    1.  **Compara** la imagen candidata con la imagen de referencia y con las descripciones diagnósticas, siguiendo los criterios anteriores.
     2.  **Determina** si la imagen candidata **COINCIDE** o **NO COINCIDE** con *{species_name}*.
-    3.  **Explica brevemente** los rasgos que coinciden y los que no coinciden, tanto en la cabeza como en el cuerpo (si es visible), indicando en qué descripción se basa cada observación.
+    3.  **Explica brevemente** los rasgos de coloración y de las manchas que coinciden y los que no coinciden, tanto en la cabeza como en el cuerpo (si es visible), indicando en qué descripción se basa cada observación.
 
     Responde en español. La primera línea de tu respuesta debe ser exactamente "VEREDICTO: COINCIDE" o "VEREDICTO: NO COINCIDE",
     seguida de una breve justificación.
@@ -190,6 +199,7 @@ def make_result_row(reference_file, species, file_name, message, batch):
     output_tokens = message.usage.output_tokens  # includes thinking tokens
     return {
         "model": MODEL,
+        "prompt_version": PROMPT_VERSION,
         "mode": "batch" if batch else "direct",
         "reference": reference_file,
         "species": species,
@@ -389,7 +399,12 @@ leptodeira_ornata = {
     }
 
 reference_list = [leptodeira_annulata, leptodeira_approximans, leptodeira_ashmeadii, leptodeira_ornata]
-species_list = ['L. annulata', 'L. approximans', 'L. ashmeadii', 'L. ornata']
+# Every folder in data/test is a group of test photos (the 4 species plus e.g. "Sin identificar").
+# Each photo is compared with every reference, whatever its folder.
+species_list = sorted(
+    name for name in os.listdir(os.path.join("data", "test"))
+    if os.path.isdir(os.path.join("data", "test", name))
+)
 
 print(f"\nUsing model: {MODEL} ({MODE} mode)")
 print(f"Results file: {RESULTS_CSV}")
