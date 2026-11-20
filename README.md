@@ -127,6 +127,9 @@ python matching.py --model claude-haiku-5-5
 
 # Send requests one at a time instead of as a batch
 python matching.py --model claude-haiku-5-5 --mode direct
+
+# Run the experiment in English (prompt and descriptions in English)
+python matching.py --model claude-haiku-5-5 --lang en
 ```
 
 **Modes:**
@@ -138,6 +141,7 @@ The prompt and the diagnostic descriptions (from `data/Diagnósis Duellaman, Cos
 Results are saved per model and prompt version to `results_<model>_<prompt version>.csv` (e.g. `results_claude-sonnet-5-5_es_v2.csv`, UTF-8 so Excel shows accents correctly), so runs can be compared across models and prompt versions. The prompt version is set by `PROMPT_VERSION` in `matching.py`; change it whenever you change the prompt, so results from different prompts are never mixed. Prompt versions so far:
 - `es_v1` (files named `results_<model>_es.csv`): Spanish prompt, comparing head morphology, scales and eyes as well as coloration.
 - `es_v2`: diagnosis based on coloration and blotch shape; head, eye and scale size and shape are ignored.
+- `en_v2` (`--lang en`): the same criteria as `es_v2`, with the prompt and answers in English (`VERDICT: MATCH` / `VERDICT: NO MATCH`). The descriptions come from `data/Diagnosis Duellaman, Costa & Gunter_English.docx`, which is not a translation of the Spanish file: its descriptions are longer, and it adds a Costa description for *L. ashmeadii*.
 
 Each row records the `model`, the `prompt_version`, the `mode`, the token usage (`input_tokens`, `output_tokens`, where output includes thinking tokens) and an estimated `cost_usd` based on list prices.
 

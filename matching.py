@@ -39,13 +39,19 @@ parser.add_argument("--model", default="claude-opus-5-5",
 parser.add_argument("--mode", choices=["batch", "direct"], default="batch",
                     help="batch: send all requests through the Message Batches API (50%% cheaper, "
                          "results usually within an hour); direct: one request at a time (default: batch)")
+parser.add_argument("--lang", choices=["es", "en"], default="es",
+                    help="es: Spanish prompt and descriptions (data/Diagnósis Duellaman, Costa & Gunter.docx); "
+                         "en: English prompt and descriptions (data/Diagnosis Duellaman, Costa & Gunter_English.docx) "
+                         "(default: es)")
 args = parser.parse_args()
 
 MODEL = args.model
 MODE = args.mode
+LANG = args.lang
 # Change this whenever the prompt changes, so results from different prompt versions are never mixed.
 # es_v1: Spanish prompt; es_v2: diagnosis prioritizes coloration and blotch shape, ignores head/eye/scale size and shape
-PROMPT_VERSION = "es_v2"
+# en_v2: same criteria as es_v2, in English, with the full English descriptions (they are longer than the Spanish ones)
+PROMPT_VERSION = f"{LANG}_v2"
 RESULTS_CSV = f"results_{MODEL}_{PROMPT_VERSION}.csv"  # one results file per model and prompt version, for later comparison
 BATCH_STATE_FILE = f"batch_{MODEL}_{PROMPT_VERSION}.json"  # tracks submitted batches so an interrupted run can collect them later
 
@@ -101,8 +107,40 @@ def build_request_params(reference_image_path, new_image_path, species_name, des
     """
     descriptions_text = "\n".join(f"    - {author}: {text}" for author, text in descriptions)
 
-    # 📝 Step 1: Craft the detailed, structured prompt (in Spanish)
-    prompt = f"""
+    # 📝 Step 1: Craft the detailed, structured prompt (in Spanish or English)
+    if LANG == "en":
+        prompt = f"""
+    You are an expert herpetologist performing species verification.
+
+    The target species is *{species_name}*.
+
+    --- REFERENCE MATERIALS ---
+
+    1.  **Reference image:** The first image shows the coloration and the markings of the head of a confirmed specimen of *{species_name}*.
+    2.  **Diagnostic descriptions (color pattern), by author:**
+{descriptions_text}
+
+    --- DIAGNOSTIC CRITERIA ---
+
+    -   **Priority:** base the diagnosis mainly on **coloration** and on the **shape of the blotches**: ground color, presence and course of stripes, and shape and arrangement of the dorsal blotches (for example, half-moon-shaped blotches, blotches fused into a zigzag, or blotches divided along the midline).
+    -   **Head coloration:** do take it into account (color of the top of the head, spots, stripes and markings on the head and nape).
+    -   **Do not take into account** the size or shape of the head, the eyes or the scales, even if they look different from the reference image. Scales only serve as landmarks to locate blotches or stripes (for example, "stripe on the parietals").
+
+    --- TASK ---
+
+    The second image is the **Candidate image** to be identified.
+
+    1.  **Compare** the candidate image with the reference image and with the diagnostic descriptions, following the criteria above.
+    2.  **Determine** whether the candidate image is a **MATCH** or **NO MATCH** for *{species_name}*.
+    3.  **Briefly explain** which features of the coloration and of the blotches match and which do not, both on the head and on the body (if visible), stating which description each observation is based on.
+
+    Answer in English. The first line of your answer must be exactly "VERDICT: MATCH" or "VERDICT: NO MATCH",
+    followed by a brief justification.
+    """
+        reference_label, candidate_label = "Reference image:", "Candidate image:"
+    else:
+        reference_label, candidate_label = "Imagen de referencia:", "Imagen candidata:"
+        prompt = f"""
     Eres un herpetólogo experto que realiza la verificación de especies.
 
     La especie objetivo es *{species_name}*.
@@ -133,9 +171,9 @@ def build_request_params(reference_image_path, new_image_path, species_name, des
 
     # 🔗 Step 2: Combine the prompt and images into one request
     content = [
-        {"type": "text", "text": "Imagen de referencia:"},
+        {"type": "text", "text": reference_label},
         image_to_block(reference_image_path),
-        {"type": "text", "text": "Imagen candidata:"},
+        {"type": "text", "text": candidate_label},
         image_to_block(new_image_path),
         {"type": "text", "text": prompt}
     ]
@@ -181,9 +219,10 @@ def parse_match_result(result_text):
     if not result_text or "Error:" in result_text:
         return None
 
-    verdict = re.search(r"VEREDICTO:\s*(NO COINCIDE|COINCIDE)", result_text, re.IGNORECASE)
+    # Spanish (VEREDICTO: COINCIDE / NO COINCIDE) or English (VERDICT: MATCH / NO MATCH)
+    verdict = re.search(r"(?:VEREDICTO|VERDICT):\s*\**\s*(NO COINCIDE|COINCIDE|NO MATCH|MATCH)", result_text, re.IGNORECASE)
     if verdict:
-        return verdict.group(1).upper() == "COINCIDE"
+        return verdict.group(1).upper() in ("COINCIDE", "MATCH")
 
     # If we can't determine, return None
     return None
@@ -398,7 +437,139 @@ leptodeira_ornata = {
     ]
     }
 
+# Diagnostic descriptions in English, from data/Diagnosis Duellaman, Costa & Gunter_English.docx.
+# The editor's notes in that document ("No statement.", "No description of the blotch's own shape...",
+# "No specific statement.") are not part of the authors' descriptions and are left out.
+DESCRIPTIONS_EN = {
+    "Leptodeira annulata": [
+        ("Duellman", "The color of the top of the head varies from a light brown to a dull grayish brown. It is usually "
+                     "unmarked, but sometimes there is a faint stripe along the lateral edge of each parietal. A dark brown "
+                     "postorbital stripe begins on the postoculars and extends posteriorly across the anterior part of the "
+                     "primary temporal, the bottom of the lower secondary temporal, and the top of upper labials 6 and 7, to "
+                     "terminate on the posteroventral corner of upper labial 8. The juveniles have a striking coloration. The "
+                     "nape region from the posterior edge of the parietals and including the temporals to the first body "
+                     "blotch is a pure, glossy white. With age the white color fades so that in the adults the area is much "
+                     "the same as the ground color. In a few individuals there is an indistinct dark stripe on each side of "
+                     "the neck diverging from the posterior edge of the parietals, sometimes extending posteriorly to the "
+                     "first body blotch. The dorsal ground color varies from cream-tan to gray-brown. There are from 25 to 50 "
+                     "(33.4) chocolate brown, saddle-shaped body blotches that are four or five scales in length, three to "
+                     "four times the length of the middorsal interspaces, extending laterally onto scale rows 5 to 7. "
+                     "Sometimes the dorsal blotches are interconnected and form a zigzag stripe down the back. In a few "
+                     "individuals the zigzag band may be straight and narrow, giving the appearance of a dark brown middorsal "
+                     "stripe. Lateral intercalary spots are absent or exist only as darkened scale borders on rows 1 to 3."),
+        ("Costa", "Dorsum of the head light brown to grayish brown generally without spots. Parietals with or without dark "
+                  "brown posterior edges. Distinctive postorbital with a dark brown stripe begins in the postocular scales "
+                  "and extends to the region of the last supralabial. Diagnosis: occipital region light brown to grayish "
+                  "brown without stripes. Colour: Occipital region without stripes, sometimes only as a narrow thin line, "
+                  "which begins in the posterior region of parietal scales and extends medially (2–6 occipital scales) "
+                  "which not contacting the first dorsal blotch. Comparison: the absence or only a medial thin line in the "
+                  "occipital region (vs. occipital region with well-defined dark stains). Ontogeny: we observed an "
+                  "ontogenetic change in the color pattern, with the presence of white or cream occipital collar in "
+                  "hatchling and juveniles becoming light brown in adults. Some adults can keep this collar, but always the "
+                  "coloration is darker than in hatchling and juveniles. Diagnosis: first dorsal blotch with half-moon shape "
+                  "generally fused with other dorsal blotches in the first third of body forming a zigzag pattern. Colour: "
+                  "Anterior border of the first dorsal blotch with a half-moon shape which extending to the "
+                  "quadrate-articular joint. The first dorsal blotch usually fuses with other blotches on the first third of "
+                  "the dorsal body to form a zigzag pattern. Number of dorsal blotches in males 25–51 and females 23–53. "
+                  "Dorsal blotches dark brown with saddle or oval-shaped. Along with the body, fusion may occur between some "
+                  "blotches and also resulting in a zigzag pattern or in a single dark vertebral stripe. Lateral region of "
+                  "the body without lateral and intercalary spots, but when present, are small, rounded, and poorly "
+                  "highlighted."),
+    ],
+    "Leptodeira approximans": [
+        ("Gunther", "An obscure streak from the eye towards the angle of the mouth, the band on the temple very distinct, an "
+                    "undulated (zigzag) dark brown band along the back. Sometimes the ground-colour is so dark that the "
+                    "dorsal band is scarcely visible. A young specimen is whitish with the dorsal band black."),
+        ("Costa", "Diagnosis: the absence of dark stains in the dorsal view of the head and occipital region. Colour: Dorsum "
+                  "of the head varies from light to dark brown with some specimens presenting dark brown spots, mainly in "
+                  "frontal and parietals scales. Postorbital stripe dark brown begins in the postocular scales and extends "
+                  "to the last supralabial. Diagnosis: occipital region light brown to grayish brown without stripes. "
+                  "Comparison: but when present, it is only a medial thin line often poorly defined in the posterior edges "
+                  "of parietal scales extending to the middle occipital region (vs. well-defined occipital dark stains). "
+                  "Ontogeny: we observed an ontogenetic change in the color pattern, with the presence of white or cream "
+                  "occipital collar in hatchling and juveniles becoming light brown in adults. Diagnosis: first dorsal "
+                  "blotches of the body with a half-moon shape, generally fused with other dorsal blotches in the first "
+                  "third of body forming a zig-zag pattern. Colour: The anterior border of the first dorsal blotch is "
+                  "half-moon-shaped, with the ends extending to the quadrate-articular joint. The ends of the dorsal "
+                  "blotches may be absent, with rounded edges and separated forming two small spots near to the head. The "
+                  "first blotch usually fuses with others blotches on the first third of the body to form a zigzag pattern. "
+                  "Dorsum of the body varies from light to dark brown, with a saddle or oval-shaped. Number of dorsal "
+                  "blotches in males 27–39 and females 26–45. The lateral region of the body is usually without lateral and "
+                  "intercalary spots, but when present, it is poorly highlighted and formed by a scatter pigmentation at "
+                  "edges of scales."),
+    ],
+    "Leptodeira ashmeadii": [
+        ("Duellman", "The dorsal surface of the head is light brown, with irregular dark brown spots on the prefrontals, "
+                     "frontal, and parietals. These spots may be small and scattered or may be larger and centered in the "
+                     "middle of each plate. There may be a dark brown stripe along the lateral edge of the parietal and "
+                     "connecting with the nape blotches on the posteromedian border of the parietal. There is a dark brown "
+                     "preorbital stripe from the nostril across the loreal to the orbit and a postorbital stripe that begins "
+                     "on the postoculars and passes over the lower part of the primary temporal, upper posterior corner of "
+                     "the sixth upper labial, top of the seventh, and middle of the eighth. The stripe may terminate on the "
+                     "eighth upper labial or continue posteriorly for a short distance on the third scale row. Remarks, "
+                     "Colombia west of the Sierra Santa Marta: the nape blotch usually is not completely divided as is "
+                     "typical of ashmeadi, and there is often a nape stripe. The first body blotch is divided along the "
+                     "midline by a stripe of ground color. In some individuals the separation is not complete, so that "
+                     "either the posterior or the anterior end of the blotch, or both, may be in contact. This blotch extends "
+                     "anteriorly on the nape to the postparietals or the posterior edge of the parietals. The first body "
+                     "blotch may be longitudinally divided along the midline, with arms extending nearly to the parietals. "
+                     "In those in which the first body blotch is not divided there may be a short nape stripe. The dorsal "
+                     "color pattern consists of 29-51 dark brown body blotches outlined with a darker brown or black. The "
+                     "dorsal blotches sometimes alternate, one lateral half being offset anteriorly or posteriorly from the "
+                     "other half; occasionally the blotches are interconnected, but not so as to form a long, continuous, "
+                     "zigzag band. Dark brown, lateral, intercalary spots are present on scale rows 2 to 4; these spots "
+                     "usually are no more than two scales in length. There may be small dark spots indistinctly arranged in "
+                     "a row on scale rows 1 and 2. Some individuals have no lateral intercalary spots; most have the spots "
+                     "on rows 3 and 4, and sometimes small spots on rows 1 and 2."),
+        ("Costa", "Diagnosis: two dark brown parallel stripes in the parietal region which run toward the occipitals. "
+                  "Colour: Dorsum of the head light brown with dark brown spots with different shapes. Comparison: the "
+                  "presence of larger dark spots in the dorsal view of the head and dark stripes in the occipital region "
+                  "(vs. dorsal head with small or absent dark spots and the occipital region with or without medial thin "
+                  "line). The postorbital dark brown stripe begins in the postocular scales and extends to the last "
+                  "supralabial scale. Diagnosis: two occipital stripes extend to the body and fuse with the first dorsal "
+                  "blotch. Colour: Occipital region and neck with two dark brown stripes that could merge with the first "
+                  "dorsal blotch. The dorsal view of the body light brown with dark brown blotch with dark edges showing "
+                  "oval shape. Number of dorsal blotches in males 19–58 and females 27–59. Throughout the body may occur "
+                  "fusion between some blotches resulting in a zigzag pattern. The space between dark blotches is less than "
+                  "the length of the blotch. Lateral region of the body with great lateral and intercalary blotches."),
+    ],
+    "Leptodeira ornata": [
+        ("Duellman", "The top of the head is grayish brown; sometimes there are scattered dark brown spots on the frontal "
+                     "and parietals. A postorbital stripe begins on the postoculars and passes across the anterior edge of "
+                     "the primary temporal, the bottom of the lower secondary temporal, the top of the sixth and seventh "
+                     "upper labials, and the middle of the eighth to terminate at the corner of the mouth. Juveniles have a "
+                     "white nape band; the white color includes the posterior temporals, postparietals, and dorsal scale rows "
+                     "to the first body blotch. The color darkens with age, so that in adults that of the nape is the same as "
+                     "the ground color. The juvenile nape coloration is identical with that found in L. a. annulata. Living "
+                     "young: the occipital region was an immaculate white. In some there is a thin, often indistinct, nape "
+                     "stripe extending posteriorly from the posterior margins of the parietals for the length of three to "
+                     "five scales. Variation, inter-Andean valleys: usually the nape stripe is present, and it may be "
+                     "connected to the first body blotch. In some individuals there is a lateral expansion of the nape stripe "
+                     "anteriorly to form a T-shaped mark, with the arms of the T extending laterally onto the postparietals. "
+                     "Ecuador: those from northwestern Ecuador usually have no nape stripe. Chocó: usually have an indistinct "
+                     "nape stripe. The dorsal ground color is cream-tan to grayish tan. There are 30 to 52 dark brown dorsal "
+                     "body blotches that are three to four scales in length, twice the length or equal to the length of the "
+                     "dorsal light interspaces, and extend laterally to scale rows 4 to 6. The dorsal blotches may be rounded "
+                     "or saddle-shaped, but more often are in the shape of cross bands. There are dark, lateral, intercalary "
+                     "spots on rows 2 to 5."),
+        ("Costa", "Diagnosis: dorsum of the head brown, generally without spots. Colour: Dorsum of the head is light brown, "
+                  "some specimens with a small dark brown spot on the parietal scales. Distinctive postorbital with a dark "
+                  "brown stripe begins in the postocular scales and extends to the region of the last supralabials. "
+                  "Diagnosis: occipital region light brown with medial wide line. Colour: Occipital region with medial wide "
+                  "line, which begins in the posterior region of parietal scales and extends medially (5 occipital scales), "
+                  "may contacting the first dorsal blotch. Comparison: the presence of medial wide line (vs. without "
+                  "well-defined occipital dark stains); the presence of a dark butterfly-shaped spot. First body blotch with "
+                  "variable shape, from a band to H shape. Dorsum of body light brown with dark brown blotches with ovoid "
+                  "shaped. Number of dorsal blotches in males 29–55 and females 29–56. May occur fusion between the blotches "
+                  "along the body, to form a zigzag pattern. The lateral region of the body is usually with lateral spots, "
+                  "formed by the pigmentation of the edges of the scales, and large and highlighted intercalars spots."),
+    ],
+}
+
 reference_list = [leptodeira_annulata, leptodeira_approximans, leptodeira_ashmeadii, leptodeira_ornata]
+if LANG == "en":
+    for reference in reference_list:
+        reference["descriptions"] = DESCRIPTIONS_EN[reference["species_name"]]
 # Every folder in data/test is a group of test photos (the 4 species plus e.g. "Sin identificar").
 # Each photo is compared with every reference, whatever its folder.
 species_list = sorted(
@@ -406,7 +577,7 @@ species_list = sorted(
     if os.path.isdir(os.path.join("data", "test", name))
 )
 
-print(f"\nUsing model: {MODEL} ({MODE} mode)")
+print(f"\nUsing model: {MODEL} ({MODE} mode, language: {LANG})")
 print(f"Results file: {RESULTS_CSV}")
 
 # Check if this model's results file exists and ask user what to do
