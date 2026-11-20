@@ -82,8 +82,9 @@ def image_to_block(image_path):
     # Phone photos store their rotation in EXIF; apply it so the snake isn't sideways
     image = ImageOps.exif_transpose(image).convert("RGB")
 
-    # Claude downscales images whose long edge exceeds ~1568px, so resize up front
-    # to keep requests small and under the per-image size limit
+    # Resize to a 1568px long edge to keep requests small and cheap. Newer models such as
+    # claude-haiku-5-5 accept up to 2576px (verified with count_tokens), so this loses some detail;
+    # kept at 1568px so all runs use the same resolution and stay comparable.
     max_size = (1568, 1568)
     if image.size[0] > max_size[0] or image.size[1] > max_size[1]:
         image.thumbnail(max_size, Image.Resampling.LANCZOS)

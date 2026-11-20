@@ -77,6 +77,12 @@ print(up[up["n_match"] == 1]["matched"].value_counts().to_string(), "\n")
 
 # 6. Indicadores en las justificaciones
 print("6. Indicadores en las justificaciones (fotos identificadas)")
+LANG = "en" if str(d["prompt_version"].iloc[0]).startswith("en") else "es"
+patterns_en = {
+    "rasgo no verificable": r"cannot (?:be )?(?:see|seen|confirm|confirmed|verify|verified|assess|assessed|evaluate|evaluated)|can't (?:see|confirm|verify|assess)|not (?:visible|verified|assessed|discernible|clear)|no(?:t)? (?:clearly )?(?:visible|discernible)",
+    "confianza limitada": r"inconclusive|not conclusive|tentative|moderate|limited|uncertain|ambiguous|doubtful",
+    "ejemplar conservado": r"preserved|preservation",
+}
 patterns = {
     "rasgo no verificable": r"no se (?:aprecia|observa|distingue|ve|puede)|no (?:es|son) visible|no puedo (?:confirmar|verificar)|no se pueden? (?:verificar|valorar|evaluar)",
     "confianza limitada": r"no es concluyente|no concluyente|moderad|limitad|dudos|incierto|ambig",
@@ -84,6 +90,8 @@ patterns = {
 }
 # (Los autores citados no sirven como indicador: el modelo cita exactamente
 # a los autores de la descripción de la especie de referencia.)
+if LANG == "en":
+    patterns = patterns_en
 text = known["result_text"].str.lower()
 ind = []
 for name, pat in patterns.items():
@@ -109,6 +117,19 @@ features = {
     "color uniforme / sin marcas": r"uniforme|sin marcas|carece de marcas",
     "moteado": r"motead",
 }
+if LANG == "en":
+    features = {
+        "media luna": r"half-moon|half moon|crescent",
+        "zigzag": r"zig ?-?zag",
+        "línea media / dividida": r"midline|medial|divided",
+        "franja": r"stripe",
+        "banda": r"band",
+        "nuca / occipital": r"nape|nuchal|occipital",
+        "parietales": r"parietal",
+        "manchas fusionadas": r"fuse|fusion|fusing",
+        "color uniforme / sin marcas": r"uniform|unmarked|without spots|no spots",
+        "moteado": r"mottl|speckl|stippl",
+    }
 rows = []
 for sp in sorted(known["ref"].unique()):
     sub = known[known["ref"] == sp]

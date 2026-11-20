@@ -43,7 +43,7 @@ Las fotografías candidatas se organizaron en carpetas según su identificación
 Antes de enviarlas al modelo, las fotografías se prepararon de la misma manera:
 
 - se corrigió su orientación según la información guardada por la cámara;
-- se redujo su tamaño a un máximo de 1568 píxeles en el lado más largo, que es el tamaño recomendado para este modelo;
+- se redujo su tamaño a un máximo de 1568 píxeles en el lado más largo, para limitar el tamaño de las consultas y su costo (el modelo admite hasta 2576 píxeles, por lo que esta reducción implica una pérdida de detalle, que se consideró aceptable para evaluar patrones de coloración y forma de manchas);
 - se convirtieron al formato JPEG.
 
 ## 4. Instrucciones dadas al modelo
